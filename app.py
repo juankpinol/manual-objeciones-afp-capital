@@ -251,6 +251,18 @@ def export_study_sheet_markdown(obj):
     md += f"- [ ] Puedo replicar la secuencia de cierre sin prometer rentabilidad.\n"
     return md
 
+# --- MENU LATERAL (SIDEBAR) ---
+st.sidebar.markdown("<div class='sidebar-brand'>🛡️ AFP Capital<br><small>Manual de Objeciones</small></div>", unsafe_allow_html=True)
+menu = st.sidebar.radio(
+    "Navegación",
+    [
+        "🏠 Inicio",
+        "📖 Manual de Objeciones",
+        "⚙️ Configuración",
+        "🛡️ Buenas Prácticas"
+    ]
+)
+
 # --- PANEL DE PARÁMETROS DILUIDOS ---
 parametros = st.session_state.parametros
 comisiones = parametros.get("comisiones", {})

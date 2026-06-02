@@ -17,7 +17,6 @@ DATA_OBJECIONES_PATH = BASE_DIR / "objeciones_base_streamlit.json"
 DATA_PARAMETROS_PATH = BASE_DIR / "parametros_app_manual_objeciones.json"
 
 # --- FUNCIONES DE CARGA Y GUARDADO DE DATOS ---
-@st.cache_data
 def load_base_objeciones():
     try:
         with open(DATA_OBJECIONES_PATH, "r", encoding="utf-8") as f:

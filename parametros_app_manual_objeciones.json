@@ -1,0 +1,29 @@
+{
+  "empresa": "AFP Capital",
+  "version": "MVP-1",
+  "fecha_actualizacion": "Completar",
+  "comisiones": {
+    "cuenta_obligatoria": "Validar vigente antes de usar",
+    "apv": "Validar vigente antes de usar",
+    "cuenta_2": "Validar vigente antes de usar",
+    "deposito_convenido": "Validar vigente antes de usar"
+  },
+  "topes_tributarios": {
+    "apv_regimen_a": "Validar normativa vigente",
+    "apv_regimen_b": "Validar normativa vigente",
+    "cuenta_2": "Validar normativa vigente"
+  },
+  "links_herramientas": {
+    "simulador_apv": "Completar",
+    "comparador_costos": "Completar",
+    "rentabilidad_multifondos": "Completar",
+    "perfil_riesgo": "Completar",
+    "crm": "Completar"
+  },
+  "disclaimers": [
+    "La rentabilidad pasada no garantiza rentabilidad futura.",
+    "Toda recomendación debe ajustarse al perfil, horizonte, objetivo y situación tributaria del cliente.",
+    "Validar comisiones, topes y normativa vigente antes de presentar información a clientes.",
+    "No ofrecer incentivos indebidos ni prometer resultados futuros."
+  ]
+}

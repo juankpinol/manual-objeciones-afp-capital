@@ -268,5 +268,97 @@
     "whatsapp": "Totalmente válido cuidar la liquidez. Primero definamos si el objetivo es pensión, impuestos o proyecto; después elegimos APV o Cuenta 2.",
     "llamada": "No quiero amarrarle recursos si su objetivo requiere flexibilidad.",
     "errores_evitar": ["Vender APV para un objetivo de corto plazo", "No explicar condiciones", "No ofrecer Cuenta 2 como alternativa."]
+  },
+  {
+    "id": "OBJ-016",
+    "categoria": "Pensión",
+    "producto": ["Cuenta Obligatoria", "APV"],
+    "canal": ["Reunión", "Llamada"],
+    "nivel": "Intermedio",
+    "sensibilidad": "Amarillo",
+    "objecion_cliente": "Prefiero quedarme donde estoy porque mi pensión será muy baja igual",
+    "fondo_real": "Es una mezcla de apatía y temor. El cliente usa la baja pensión esperada como argumento para no actuar.",
+    "preguntas_diagnostico": [
+      "¿Ha calculado la brecha entre su sueldo actual y su pensión proyectada?",
+      "¿Sabe qué variables sí puede controlar para mejorar esa proyección?",
+      "¿Le gustaría ver si hay alguna opción que hoy no esté aprovechando?"
+    ],
+    "respuesta_comercial": "Precisamente si la pensión proyectada no es suficiente, quedarse inmóvil es la peor alternativa. Cuando el escenario no es cómodo, hay que tomar decisiones: revisar fondo, evaluar APV, ordenar beneficios tributarios y construir un plan realista. No le propongo una promesa; le propongo un diagnóstico y un plan.",
+    "argumentos": [
+      "Quedarse inmóvil no mejora el resultado.",
+      "El diagnóstico permite ver si hay margen de acción.",
+      "Pequeñas acciones hoy marcan diferencia a largo plazo."
+    ],
+    "herramientas": ["Simulador de pensión", "Cálculo de brecha"],
+    "cierre": "Si después del análisis no hay una oportunidad, lo dejamos claro. Pero si existe una brecha que podemos trabajar, sería una lástima no verla a tiempo.",
+    "whatsapp": "Entiendo la preocupación. Precisamente si la proyección de pensión es baja, conviene analizar si existen opciones de mejora como la estrategia de fondos o el ahorro voluntario. Lo revisamos con tus datos.",
+    "llamada": "Le propongo revisar si hoy está aprovechando todas las alternativas para mejorar su escenario. Si no hay oportunidad, se lo diré con claridad.",
+    "errores_evitar": [
+      "Aceptar la resignación del cliente.",
+      "Prometer soluciones mágicas.",
+      "No ofrecer un diagnóstico concreto."
+    ]
+  },
+  {
+    "id": "OBJ-017",
+    "categoria": "Servicio",
+    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
+    "canal": ["Reunión", "Llamada"],
+    "nivel": "Intermedio",
+    "sensibilidad": "Amarillo",
+    "objecion_cliente": "No me cambio porque antes me atendieron pésimo",
+    "fondo_real": "El cliente tuvo una mala experiencia y la proyecta sobre toda la compañía o sobre cualquier nuevo ejecutivo.",
+    "preguntas_diagnostico": [
+      "¿Qué ocurrió exactamente?",
+      "¿Fue un problema de respuesta, seguimiento, información o trato?",
+      "¿Qué esperaría de una asesoría para volver a confiar?"
+    ],
+    "respuesta_comercial": "Lamento sinceramente que haya tenido esa experiencia. No voy a justificar algo que para usted fue negativo. Lo que sí puedo hacer es mostrarle una forma distinta de trabajar: diagnóstico, recomendación clara, seguimiento y canales directos de contacto. Le pido la oportunidad de evaluar mi asesoría por hechos concretos.",
+    "argumentos": [
+      "Pedir disculpas sin asumir culpas que no corresponden.",
+      "Volver a construir confianza desde compromisos verificables.",
+      "No prometer disponibilidad ilimitada; prometer método y seguimiento."
+    ],
+    "herramientas": ["Plan de seguimiento", "Registro CRM", "Canal directo de contacto"],
+    "cierre": "Permítame demostrarle con este caso del mundo real cómo trabajo. Si la experiencia no le agrega valor, usted mantiene su decisión. Pero si ve diferencia, avanzamos.",
+    "whatsapp": "Lamento la mala experiencia que tuviste en el pasado. Mi forma de trabajar es diferente, enfocada en diagnóstico claro, respuestas rápidas y seguimiento real. Si te parece, te lo demuestro con tu caso actual.",
+    "llamada": "Le propongo evaluar mi servicio a través de un diagnóstico concreto. Si no ve una diferencia en la atención, mantiene su decisión.",
+    "errores_evitar": [
+      "Discutir sobre el pasado.",
+      "Ponerse a la defensiva.",
+      "Prometer cosas que no se pueden cumplir."
+    ]
+  },
+  {
+    "id": "OBJ-018",
+    "categoria": "Rentabilidad",
+    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
+    "canal": ["Reunión", "Llamada"],
+    "nivel": "Avanzado",
+    "sensibilidad": "Amarillo",
+    "objecion_cliente": "Habitat / Modelo / otra AFP está rentando más",
+    "fondo_real": "El cliente llega con un dato puntual y lo transforma en criterio de decisión total.",
+    "preguntas_diagnostico": [
+      "¿Qué periodo de tiempo está mirando?",
+      "¿Qué fondo específico está comparando?",
+      "¿Está considerando costos, riesgo y asesoría?",
+      "¿Quiere que revisemos el dato juntos?"
+    ],
+    "respuesta_comercial": "Puede ocurrir que una AFP lidere en un periodo específico. Lo importante es no convertir una foto en una película. Revisemos distintos plazos, el fondo correcto y su situación personal. La decisión no debe basarse sólo en quién va primero hoy, sino en qué alternativa es más coherente para usted.",
+    "argumentos": [
+      "Pasar de dato puntual a estrategia de largo plazo.",
+      "Evitar desacreditar a la competencia.",
+      "Comparar con metodología consistente.",
+      "Enfatizar asesoría, plazo, riesgo y objetivos."
+    ],
+    "herramientas": ["Tabla comparativa por horizontes", "Semáforo de ganadores por plazo", "Simulación de saldo final"],
+    "cierre": "Tomemos ese dato como punto de partida, no como conclusión. Lo revisamos juntos y vemos qué decisión se sostiene mejor.",
+    "whatsapp": "Es cierto que hay periodos donde una administradora puede liderar. Lo importante es ver la consistencia a largo plazo y si el fondo actual es el adecuado para tu perfil. Si quieres, lo revisamos juntos con datos.",
+    "llamada": "Le propongo comparar la rentabilidad en distintos plazos y ver si su estrategia actual es la más eficiente para su perfil de riesgo.",
+    "errores_evitar": [
+      "Desacreditar a la competencia.",
+      "Prometer que rentaremos más en el futuro.",
+      "Ignorar el dato del cliente."
+    ]
   }
 ]

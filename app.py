@@ -207,13 +207,13 @@ def export_objection_markdown(obj):
     md = f"# Objeción: {obj['objecion_cliente']}\n\n"
     md += f"**ID**: {obj['id']} | **Categoría**: {obj['categoria']} | **Dificultad**: {obj['nivel']}\n\n"
     md += f"## Qué hay detrás\n{obj['fondo_real']}\n\n"
-    md += f"## Concepto Técnico de Fondo\n{obj.get('concepto_tecnico', 'No especificado.')}\n\n"
-    md += f"## Explicación Simple para el Cliente\n{obj.get('explicacion_simple', 'No especificada.')}\n\n"
+    md += f"## Concepto Técnico de Fondo\n{obj.get('concepto_tecnico', '')}\n\n"
+    md += f"## Explicación Simple para el Cliente\n{obj.get('explicacion_simple', '')}\n\n"
     md += f"## Preguntas de Diagnóstico\n"
     for q in obj['preguntas_diagnostico']:
         md += f"- {q}\n"
     md += f"\n## Argumento Comercial Recomendado\n{obj['respuesta_comercial']}\n\n"
-    md += f"## Ejemplo Práctico Aplicado\n{obj.get('ejemplo_practico', 'No especificado.')}\n\n"
+    md += f"## Ejemplo Práctico Aplicado\n{obj.get('ejemplo_practico', '')}\n\n"
     md += f"## Cierre Sugerido\n{obj['cierre']}\n\n"
     md += f"## Versiones por Canal\n"
     md += f"- **WhatsApp**: {obj.get('whatsapp', '')}\n"
@@ -229,15 +229,15 @@ def export_study_sheet_markdown(obj):
     md += f"## 1. Análisis Psicológico y Comercial\n"
     md += f"**Fondo Real**: {obj['fondo_real']}\n\n"
     md += f"## 2. Concepto Técnico de Fondo\n"
-    md += f"{obj.get('concepto_tecnico', 'No especificado.')}\n\n"
+    md += f"{obj.get('concepto_tecnico', '')}\n\n"
     md += f"## 3. Explicación Simple (Sin Tecnicismos)\n"
-    md += f"{obj.get('explicacion_simple', 'No especificada.')}\n\n"
+    md += f"{obj.get('explicacion_simple', '')}\n\n"
     md += f"## 4. Preguntas de Diagnóstico Clínico Comercial\n"
     for q in obj['preguntas_diagnostico']:
         md += f"- {q}\n"
     md += f"\n## 5. Argumentación Comercial y Respuestas\n"
     md += f"**Respuesta Comercial**: {obj['respuesta_comercial']}\n\n"
-    md += f"**Ejemplo Práctico**: {obj.get('ejemplo_practico', 'No especificado.')}\n\n"
+    md += f"**Ejemplo Práctico**: {obj.get('ejemplo_practico', '')}\n\n"
     md += f"## 6. Guía de Role Play Sugerida\n"
     rp = obj.get("role_play", {})
     md += f"- **Cliente plantea**: \"{rp.get('cliente_plantea', '')}\"\n"
@@ -366,11 +366,11 @@ elif menu == "📖 Manual de Objeciones":
         
         # B. Concepto Técnico
         st.markdown("<div class='manual-h3'>🔬 Concepto Técnico que debe entender el Ejecutivo</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='manual-box' style='background-color:#F0F4F8;'>{obj.get('concepto_tecnico', 'No especificado.')}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='manual-box' style='background-color:#F0F4F8;'>{obj.get('concepto_tecnico', '')}</div>", unsafe_allow_html=True)
         
         # C. Explicación Simple para el Cliente
         st.markdown("<div class='manual-h3'>📢 Explicación Simple para el Cliente (Sin Tecnicismos)</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='manual-box'>{obj.get('explicacion_simple', 'No especificada.')}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='manual-box'>{obj.get('explicacion_simple', '')}</div>", unsafe_allow_html=True)
         
         # D. Argumento Comercial Recomendado
         st.markdown("<div class='manual-h3'>🎯 Argumento Comercial Recomendado</div>", unsafe_allow_html=True)
@@ -385,7 +385,7 @@ elif menu == "📖 Manual de Objeciones":
             
         # F. Ejemplo Práctico
         st.markdown("<div class='manual-h3'>💡 Ejemplo Práctico Aplicado</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='manual-box'>{obj.get('ejemplo_practico', 'No especificado.')}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='manual-box'>{obj.get('ejemplo_practico', '')}</div>", unsafe_allow_html=True)
         
         # G. Cierre Recomendado
         st.markdown("<div class='manual-h3'>🏁 Cierre Recomendado (Siguiente Paso Comercial)</div>", unsafe_allow_html=True)

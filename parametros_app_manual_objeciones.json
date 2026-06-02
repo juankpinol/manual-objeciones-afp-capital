@@ -1,24 +1,24 @@
 {
   "empresa": "AFP Capital",
   "version": "MVP-1",
-  "fecha_actualizacion": "Completar",
+  "fecha_actualizacion": "2026-06-02",
   "comisiones": {
-    "cuenta_obligatoria": "Validar vigente antes de usar",
-    "apv": "Validar vigente antes de usar",
-    "cuenta_2": "Validar vigente antes de usar",
-    "deposito_convenido": "Validar vigente antes de usar"
+    "cuenta_obligatoria": "1.44%",
+    "apv": "0.51%",
+    "cuenta_2": "0.95%",
+    "deposito_convenido": "0.51%"
   },
   "topes_tributarios": {
-    "apv_regimen_a": "Validar normativa vigente",
-    "apv_regimen_b": "Validar normativa vigente",
-    "cuenta_2": "Validar normativa vigente"
+    "apv_regimen_a": "6 UTM",
+    "apv_regimen_b": "600 UF",
+    "cuenta_2": "Hasta 50 UTA libres de impuestos"
   },
   "links_herramientas": {
-    "simulador_apv": "Completar",
-    "comparador_costos": "Completar",
-    "rentabilidad_multifondos": "Completar",
-    "perfil_riesgo": "Completar",
-    "crm": "Completar"
+    "simulador_apv": "https://www.afpcapital.cl/APV/simulador",
+    "comparador_costos": "https://www.spensiones.cl/apps/comisiones/index.php",
+    "rentabilidad_multifondos": "https://www.spensiones.cl/apps/rentabilidad/",
+    "perfil_riesgo": "https://www.afpcapital.cl/Herramientas/perfil-inversionista",
+    "crm": "https://crm.afpcapital.cl"
   },
   "disclaimers": [
     "La rentabilidad pasada no garantiza rentabilidad futura.",

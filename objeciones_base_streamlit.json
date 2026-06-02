@@ -2,278 +2,882 @@
   {
     "id": "OBJ-001",
     "categoria": "Costos",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Reunión", "Llamada", "WhatsApp"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada",
+      "WhatsApp"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Ustedes son más caros",
     "fondo_real": "El cliente quiere saber si el mayor costo se justifica con valor real.",
-    "preguntas_diagnostico": ["Cuando dice caro, ¿lo está mirando como monto mensual o como impacto sobre su pensión futura?", "¿Qué espera recibir a cambio de la comisión que paga?", "¿Hoy siente que su AFP actual lo asesora activamente?"],
+    "preguntas_diagnostico": [
+      "Cuando dice caro, ¿lo está mirando como monto mensual o como impacto sobre su pensión futura?",
+      "¿Qué espera recibir a cambio de la comisión que paga?",
+      "¿Hoy siente que su AFP actual lo asesora activamente?"
+    ],
     "respuesta_comercial": "Entiendo perfectamente su preocupación. Nadie quiere pagar más sin una razón clara. Por eso mi propuesta no es que tome la decisión sólo mirando la comisión, sino mirando el valor completo: asesoría, elección de fondos, planificación de APV, beneficios tributarios, seguimiento y acompañamiento.",
-    "argumentos": ["El costo es importante, pero no debe analizarse aislado.", "Una mala elección de fondo, régimen tributario o producto puede costar más que una diferencia de comisión.", "La asesoría permite transformar información en decisiones concretas."],
-    "herramientas": ["Comparador de costos", "Simulador APV A/B", "Diagnóstico de multifondo"],
+    "argumentos": [
+      "El costo es importante, pero no debe analizarse aislado.",
+      "Una mala elección de fondo, régimen tributario o producto puede costar más que una diferencia de comisión.",
+      "La asesoría permite transformar información en decisiones concretas."
+    ],
+    "herramientas": [
+      "Comparador de costos",
+      "Simulador APV A/B",
+      "Diagnóstico de multifondo"
+    ],
     "cierre": "Revisemos cuánto representa la diferencia de costo en pesos y contrastémosla con las oportunidades que podríamos capturar con una asesoría bien hecha. ¿Le parece?",
     "whatsapp": "Entiendo tu preocupación por el costo. La idea es revisarlo con datos: cuánto representa realmente y qué valor podríamos generar con asesoría, fondos, APV o beneficios tributarios. Lo vemos y decides informado.",
     "llamada": "Le propongo revisar el costo en pesos y compararlo contra el valor de la asesoría. Si no vemos una oportunidad concreta, se lo diré con claridad.",
-    "errores_evitar": ["Decir simplemente que no somos caros.", "Defender la comisión sin mostrar valor.", "No cuantificar la diferencia."]
+    "errores_evitar": [
+      "Decir simplemente que no somos caros.",
+      "Defender la comisión sin mostrar valor.",
+      "No cuantificar la diferencia."
+    ],
+    "concepto_tecnico": "Diferencia entre cobro por flujo (comisión sobre remuneración imponible retenida mensualmente por cotización obligatoria) y cobro por saldo (comisión sobre los activos administrados en APV o Cuenta 2). La comisión obligatoria no toca los fondos acumulados ni su rentabilidad.",
+    "explicacion_simple": "La comisión obligatoria se descuenta de tu sueldo mensual, no de tus ahorros acumulados. Si tus fondos crecen, no te cobraremos más por administrar ese saldo.",
+    "ejemplo_practico": "Un ejecutivo con sueldo imponible de $1.500.000 paga una diferencia de comisión imponible de aproximadamente $4.500 mensuales entre una AFP barata y una con asesoría. Esta diferencia es menor a la pérdida que puede sufrir si, por falta de asesoría, se mantiene en un multifondo inadecuado en un periodo de alta volatilidad.",
+    "role_play": {
+      "cliente_plantea": "Ustedes son más caros que otras administradoras, prefiero la más barata.",
+      "ejecutivo_responde": "Entiendo que el costo mensual sea una preocupación. Sin embargo, permítame consultarle: ¿ha calculado a cuánto equivale esa diferencia en pesos en su liquidación y si hoy cuenta con asesoría activa para proteger sus ahorros acumulados?",
+      "cliente_repregunta": "No sé la diferencia exacta en pesos, pero a la larga todo suma.",
+      "ejecutivo_profundiza_cierra": "Exacto, y justamente por eso miremos los números: la diferencia mensual suele ser el equivalente a un café. No tener asesoría activa o elegir un multifondo inadecuado puede costarle millones en su saldo final. Hagamos el cálculo real para su renta y decidamos con datos. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe dominar la estructura de cobros. En cotizaciones obligatorias el cobro es sobre el flujo de remuneración imponible mensual (con un tope imponible). En APV y Cuenta 2, el cobro es anualizado sobre el saldo administrado. Explicar el valor de la rentabilidad neta (rentabilidad obtenida menos comisiones) para demostrar que la AFP más barata no necesariamente entrega la mejor jubilación.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Conoce el impacto real en pesos de esa diferencia de comisión en su liquidación mensual?",
+        "¿Prefiere priorizar el costo inmediato o la rentabilidad neta y asesoría de su fondo?"
+      ],
+      "respuesta_30s": "La comisión obligatoria se descuenta de tu sueldo, no de tu ahorro. Una diferencia de unos pocos pesos mensuales se justifica plenamente cuando cuentas con asesoría activa en multifondos y optimización tributaria para que tu saldo final crezca mucho más.",
+      "cierre_recomendado": "Calculemos la diferencia exacta en pesos para su renta y veamos si el valor de nuestra asesoría lo justifica. ¿Le parece?"
+    }
   },
   {
     "id": "OBJ-002",
     "categoria": "Cambio de AFP",
-    "producto": ["Cuenta Obligatoria"],
-    "canal": ["Reunión", "Llamada"],
+    "producto": [
+      "Cuenta Obligatoria"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "No gracias, ya me he cambiado mucho de AFP",
     "fondo_real": "El cliente no ha percibido valor en cambios anteriores.",
-    "preguntas_diagnostico": ["¿Qué lo motivó a cambiarse antes?", "¿Qué esperaba recibir y no recibió?", "¿Alguien ha revisado si su fondo actual calza con su perfil y plazo?"],
+    "preguntas_diagnostico": [
+      "¿Qué lo motivó a cambiarse antes?",
+      "¿Qué esperaba recibir y no recibió?",
+      "¿Alguien ha revisado si su fondo actual calza con su perfil y plazo?"
+    ],
     "respuesta_comercial": "Justamente porque ya se ha cambiado varias veces, esta vez no le propongo otro cambio sin sentido. Le propongo revisar si esos cambios le agregaron valor o si sólo fueron movimientos sin estrategia.",
-    "argumentos": ["Cambiarse muchas veces puede reflejar falta de asesoría.", "La decisión debe basarse en diagnóstico, no en impulso.", "Un plan permite ordenar fondo, APV, Cuenta 2 y beneficios."],
-    "herramientas": ["Diagnóstico histórico", "Perfil de riesgo", "Simulación de brecha previsional"],
+    "argumentos": [
+      "Cambiarse muchas veces puede reflejar falta de asesoría.",
+      "La decisión debe basarse en diagnóstico, no en impulso.",
+      "Un plan permite ordenar fondo, APV, Cuenta 2 y beneficios."
+    ],
+    "herramientas": [
+      "Diagnóstico histórico",
+      "Perfil de riesgo",
+      "Simulación de brecha previsional"
+    ],
     "cierre": "Antes de hablar de cambio, hagamos el diagnóstico. Si no encontramos una oportunidad concreta, se lo diré con total claridad.",
     "whatsapp": "Entiendo que ya te hayas cambiado varias veces. Justamente por eso la idea no es cambiar por cambiar, sino revisar si hoy existe una oportunidad real con tus datos.",
     "llamada": "Hagamos primero un diagnóstico. Si no hay valor claro, no tiene sentido movernos.",
-    "errores_evitar": ["Insistir en el cambio sin diagnóstico.", "Criticar a otras AFP.", "No preguntar por experiencias anteriores."]
+    "errores_evitar": [
+      "Insistir en el cambio sin diagnóstico.",
+      "Criticar a otras AFP.",
+      "No preguntar por experiencias anteriores."
+    ],
+    "concepto_tecnico": "El impacto de la densidad de cotizaciones y la consistencia en la rentabilidad compuesta a largo plazo. Los cambios impulsivos de AFP o multifondos sin un diagnóstico estratégico destruyen valor y consolidan pérdidas por market timing ineficiente.",
+    "explicacion_simple": "Cambiarse constantemente es como sembrar una planta en distintos terrenos cada mes. Necesitamos consistencia, un diagnóstico de tu perfil y un plan que se sostenga en el tiempo.",
+    "ejemplo_practico": "Un cotizante que se cambió tres veces de AFP siguiendo recomendaciones informales en redes sociales consolidó pérdidas de mercado durante las caídas de fondos del 2022, perdiendo la oportunidad de recuperarse cuando el mercado rebotó en 2023.",
+    "role_play": {
+      "cliente_plantea": "No gracias, ya me he cambiado muchas veces de AFP y no le veo el sentido a otro cambio.",
+      "ejecutivo_responde": "Comprendo su cansancio. Cambiar por cambiar no tiene sentido si no hay una estrategia detrás. ¿Los cambios anteriores se basaron en un diagnóstico formal de su perfil y plazos, o fueron por impulsos del momento?",
+      "cliente_repregunta": "Fueron por consejos de amigos o asesores que decían que tal AFP rentaba más, pero al final sigo igual.",
+      "ejecutivo_profundiza_cierra": "Es lo que le ocurre a la mayoría. Un cambio exitoso no busca seguir la moda, sino alinear sus ahorros con sus metas personales, horizonte de jubilación y beneficios tributarios. Le propongo hacer un diagnóstico sin compromiso para ver si su estrategia actual es coherente con sus metas. Si no lo es, se lo demostraré con datos. ¿Revisamos?"
+    },
+    "modo_estudio": "El ejecutivo debe guiar al cliente a entender que la estabilidad y la diversificación temporal son claves. Los cambios frecuentes de administradora por rankings de corto plazo o el traspaso reactivo entre multifondos consolidan pérdidas de capital y no permiten que el interés compuesto actúe eficientemente.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Los cambios anteriores contaron con un análisis técnico y seguimiento personalizado?",
+        "¿Sabe si su multifondo actual calza con sus años restantes de cotización?"
+      ],
+      "respuesta_30s": "Cambiarse muchas veces sin un plan es perjudicial. Mi propuesta no es un cambio impulsivo, sino analizar si hoy estás aprovechando los beneficios de tu multifondo, régimen tributario y ahorro voluntario de acuerdo a tu edad y metas.",
+      "cierre_recomendado": "Hagamos el diagnóstico primero. Si todo está en orden, se lo diré. Si hay oportunidades de mejora, las revisamos. ¿Qué le parece?"
+    }
   },
   {
     "id": "OBJ-003",
     "categoria": "Servicio",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Reunión", "Llamada", "WhatsApp"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada",
+      "WhatsApp"
+    ],
     "nivel": "Básico",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Me cambié antes y después nunca más me llamaron",
     "fondo_real": "El cliente desconfía del seguimiento posterior.",
-    "preguntas_diagnostico": ["¿Qué seguimiento esperaba recibir?", "¿Qué tema quedó pendiente?", "¿Le gustaría dejar acordado un esquema de revisión?"],
+    "preguntas_diagnostico": [
+      "¿Qué seguimiento esperaba recibir?",
+      "¿Qué tema quedó pendiente?",
+      "¿Le gustaría dejar acordado un esquema de revisión?"
+    ],
     "respuesta_comercial": "Un cambio sin seguimiento no es asesoría, es sólo una transacción. Mi forma de trabajar es distinta: diagnóstico, recomendación clara y seguimiento definido.",
-    "argumentos": ["La asesoría comienza con la firma, no termina ahí.", "El seguimiento debe ser verificable.", "El cliente necesita canales claros de contacto."],
-    "herramientas": ["Agenda de seguimiento", "Registro CRM", "Revisión semestral"],
+    "argumentos": [
+      "La asesoría comienza con la firma, no termina ahí.",
+      "El seguimiento debe ser verificable.",
+      "El cliente necesita canales claros de contacto."
+    ],
+    "herramientas": [
+      "Agenda de seguimiento",
+      "Registro CRM",
+      "Revisión semestral"
+    ],
     "cierre": "Dejemos desde ya un compromiso concreto de próxima revisión y canales de contacto.",
     "whatsapp": "Tienes razón en exigir seguimiento. La diferencia que propongo es trabajar con diagnóstico, recomendación y una próxima revisión agendada desde el principio.",
     "llamada": "Le propongo dejar acordado desde ya cuándo revisaremos nuevamente su caso.",
-    "errores_evitar": ["Prometer disponibilidad ilimitada.", "Minimizar la mala experiencia.", "No dejar compromiso concreto."]
+    "errores_evitar": [
+      "Prometer disponibilidad ilimitada.",
+      "Minimizar la mala experiencia.",
+      "No dejar compromiso concreto."
+    ],
+    "concepto_tecnico": "Servicio de postventa y la administración basada en hitos financieros (seguimiento del perfil de riesgo, revisiones de renta imponible anual, reajustes de APV por topes tributarios y actualización del CRM comercial).",
+    "explicacion_simple": "Un cambio de AFP no debe ser un trámite transaccional de una sola vez, sino el inicio de un plan de seguimiento continuo con reuniones periódicas para ajustar tu estrategia a tu vida.",
+    "ejemplo_practico": "Un cliente que contrató APV hace 5 años nunca fue contactado. Al aumentar su renta, su régimen tributario óptimo cambió de A a B, perdiendo más de $500.000 anuales en devoluciones de impuestos por falta de asesoría y seguimiento.",
+    "role_play": {
+      "cliente_plantea": "Me cambié antes con un ejecutivo que me prometió el cielo y la tierra, y después nunca más me llamaron.",
+      "ejecutivo_responde": "Entiendo y comparto plenamente su molestia. La firma del formulario es solo el inicio de la asesoría. Permítame preguntarle, ¿qué compromisos de seguimiento o revisiones anuales le ofrecieron en esa oportunidad?",
+      "cliente_repregunta": "Me dijeron que me estarían revisando los fondos y llamando en las caídas, pero no pasó nada.",
+      "ejecutivo_profundiza_cierra": "Un ejecutivo serio no promete predecir el mercado ni estar disponible las 24 horas, sino acordar un método de trabajo: una reunión anual para revisar su perfil, enviarle informes clave y actualizar sus metas financieras. Le propongo establecer una agenda formal de seguimiento desde hoy. ¿Le parece coordinar nuestra primera revisión?"
+    },
+    "modo_estudio": "El ejecutivo debe comprender que la retención de clientes se fundamenta en un servicio transparente y estructurado. Debe explicar que la asesoría patrimonial previsional requiere revisiones sistemáticas por cambios de ciclo de vida, ingresos, cambios normativos o variaciones del perfil de riesgo.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Qué tipo de acompañamiento esperaría recibir en el manejo de sus inversiones previsionales?",
+        "¿Hoy le avisan si sus aportes mensuales de APV están optimizando sus impuestos?"
+      ],
+      "respuesta_30s": "Una asesoría real se mide en el tiempo. Mi compromiso no es solo hacer el traspaso, sino agendar revisiones periódicas para ajustar tus fondos y optimizar tus beneficios tributarios a medida que tu sueldo y tus metas cambian.",
+      "cierre_recomendado": "Definamos una agenda de contacto formal y acordemos hitos de revisión semestrales. ¿Le parece bien?"
+    }
   },
   {
     "id": "OBJ-004",
     "categoria": "Tiempo",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Llamada", "WhatsApp"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Llamada",
+      "WhatsApp"
+    ],
     "nivel": "Básico",
     "sensibilidad": "Verde",
     "objecion_cliente": "No tengo tiempo para cambiarme o revisar esto",
     "fondo_real": "El cliente percibe fricción o baja prioridad.",
-    "preguntas_diagnostico": ["¿Su preocupación es el trámite o el análisis?", "Si fuera simple y guiado, ¿lo evaluaría?", "¿Tiene 15 minutos para descartar o confirmar una oportunidad?"],
+    "preguntas_diagnostico": [
+      "¿Su preocupación es el trámite o el análisis?",
+      "Si fuera simple y guiado, ¿lo evaluaría?",
+      "¿Tiene 15 minutos para descartar o confirmar una oportunidad?"
+    ],
     "respuesta_comercial": "Mi rol es simplificarle el proceso. Usted no necesita transformarse en experto previsional; necesita tener a alguien que le ordene la información y le ayude a decidir.",
-    "argumentos": ["Una revisión breve puede evitar costos de oportunidad.", "La asesoría reduce fricción.", "Postergar también es una decisión."],
-    "herramientas": ["Checklist breve", "Reunión de 15 minutos", "Simulación en vivo"],
+    "argumentos": [
+      "Una revisión breve puede evitar costos de oportunidad.",
+      "La asesoría reduce fricción.",
+      "Postergar también es una decisión."
+    ],
+    "herramientas": [
+      "Checklist breve",
+      "Reunión de 15 minutos",
+      "Simulación en vivo"
+    ],
     "cierre": "Deme 15 minutos para revisar su caso. Si no aparece una oportunidad concreta, lo dejamos hasta ahí.",
     "whatsapp": "Lo entiendo. Por eso te propongo algo simple: 15 minutos para revisar si hay una oportunidad concreta. Si no la hay, lo dejamos ahí.",
     "llamada": "No quiero quitarle tiempo. Quiero ayudarle a decidir rápido y con datos.",
-    "errores_evitar": ["Presionar", "Alargar la explicación", "No ofrecer un paso simple."]
+    "errores_evitar": [
+      "Presionar",
+      "Alargar la explicación",
+      "No ofrecer un paso simple."
+    ],
+    "concepto_tecnico": "Costo de oportunidad financiero y digitalización de procesos previsionales. La postergación de decisiones de inversión (procrastinación financiera) tiene un costo exponencial debido al efecto del interés compuesto en el tiempo.",
+    "explicacion_simple": "Postergar la revisión de tus ahorros previsionales es una decisión que cuesta dinero. Hoy el proceso es 100% digital, toma solo 15 minutos y puede evitarte grandes costos de oportunidad.",
+    "ejemplo_practico": "Un cliente postergó por 3 años la apertura de su APV. Al final, dejó de percibir la bonificación estatal del 15% (Régimen A) sobre sus ahorros, lo que equivalía a haber dejado de recibir más de $450.000 gratuitos del Estado.",
+    "role_play": {
+      "cliente_plantea": "No tengo tiempo para cambiarme de AFP ni para ponerme a revisar mis cartolas ahora.",
+      "ejecutivo_responde": "Entiendo perfectamente que su agenda esté copada. Precisamente por eso mi trabajo es ahorrarle tiempo: yo analizo la información y le presento solo las conclusiones. ¿Su preocupación de tiempo es por la burocracia del trámite o por el análisis técnico?",
+      "cliente_repregunta": "Por ambas cosas. Todo lo que es previsional me parece latero y complejo, y me da lata reunirme.",
+      "ejecutivo_profundiza_cierra": "Le garantizo que hoy el trámite es 100% digital y toma menos de 10 minutos con clave de seguridad. Mi propuesta es una sesión breve de zoom de 15 minutos enfocada solo en sus números. Si no encontramos ahorros o mejoras concretas, lo descartamos de inmediato. ¿Qué día de la semana le acomoda más?"
+    },
+    "modo_estudio": "El ejecutivo debe desmitificar la complejidad del sistema previsional para el cliente. Debe apoyarse en herramientas digitales que hagan la recopilación de datos simple, enfatizando que cada mes que pasa sin rentabilizar correctamente o sin optimizar impuestos es dinero perdido que no se recupera.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Sabe que hoy la asesoría y el trámite de traspaso son totalmente digitales y toman menos de 15 minutos?",
+        "¿Cuánto tiempo más planea postergar decisiones que impactan directamente su jubilación?"
+      ],
+      "respuesta_30s": "No necesitas ser un experto previsional ni invertir horas de tu tiempo. Mi labor es simplificar la información y guiarte en una revisión digital de 15 minutos para optimizar tu pensión o tus impuestos de forma rápida y sin trámites complejos.",
+      "cierre_recomendado": "Agendemos una videollamada corta de 15 minutos esta semana para analizar tu caso con datos reales. ¿Prefieres mañana o el jueves?"
+    }
   },
   {
     "id": "OBJ-005",
     "categoria": "Diferenciación",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Reunión"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Todas las AFP son iguales",
     "fondo_real": "El cliente no ve diferenciación de asesoría ni acompañamiento.",
-    "preguntas_diagnostico": ["¿Qué tendría que pasar para que una AFP sí le pareciera distinta?", "¿Hoy alguien le ayuda a revisar fondo, APV o beneficios tributarios?", "¿Comparamos más allá de la comisión?"],
+    "preguntas_diagnostico": [
+      "¿Qué tendría que pasar para que una AFP sí le pareciera distinta?",
+      "¿Hoy alguien le ayuda a revisar fondo, APV o beneficios tributarios?",
+      "¿Comparamos más allá de la comisión?"
+    ],
     "respuesta_comercial": "Desde fuera puede parecer que todas hacen lo mismo, pero la diferencia aparece cuando revisamos asesoría, acompañamiento, calidad de recomendación y decisiones concretas.",
-    "argumentos": ["La administración puede parecer similar; la asesoría no.", "La diferencia aparece al activar oportunidades.", "Un cliente informado decide mejor."],
-    "herramientas": ["Matriz de valor", "Diagnóstico de oportunidades", "Comparativo de productos"],
+    "argumentos": [
+      "La administración puede parecer similar; la asesoría no.",
+      "La diferencia aparece al activar oportunidades.",
+      "Un cliente informado decide mejor."
+    ],
+    "herramientas": [
+      "Matriz de valor",
+      "Diagnóstico de oportunidades",
+      "Comparativo de productos"
+    ],
     "cierre": "No comparemos AFP en abstracto. Compare lo que hoy recibe versus lo que podemos trabajar juntos.",
     "whatsapp": "Entiendo que parezcan iguales. La diferencia se ve al revisar asesoría, fondos, APV, Cuenta 2 y beneficios concretos en tu caso.",
     "llamada": "Le propongo comparar el servicio real que recibe hoy contra una asesoría con diagnóstico y seguimiento.",
-    "errores_evitar": ["Responder con slogan", "No mostrar diferencias concretas", "Hablar mal de otras compañías."]
+    "errores_evitar": [
+      "Responder con slogan",
+      "No mostrar diferencias concretas",
+      "Hablar mal de otras compañías."
+    ],
+    "concepto_tecnico": "Diferenciación de propuestas de valor en la administración previsional: arquitectura abierta de asesoría, consistencia de rentabilidad histórica de largo plazo, servicio multicanal, herramientas de simulación avanzadas y solidez corporativa.",
+    "explicacion_simple": "Aunque por ley todas las AFP administran las mismas cuentas obligatorias, no todas entregan la misma asesoría, herramientas de simulación ni consistencia en el largo plazo. Ahí es donde se ve la diferencia en tu saldo final.",
+    "ejemplo_practico": "Dos personas con la misma renta iniciaron su ahorro hace 15 años. Uno recibió asesoría activa y oportuna en multifondos y APV; el otro se quedó en el fondo por defecto sin asesoría. Hoy, el primer cliente tiene un saldo un 20% mayor debido a una correcta asignación de fondos.",
+    "role_play": {
+      "cliente_plantea": "Da lo mismo la AFP en la que esté, al final todas hacen lo mismo y cobran parecido.",
+      "ejecutivo_responde": "Es una percepción muy común porque el producto básico obligatorio está definido por ley. Sin embargo, ¿hoy en su AFP cuenta con un asesor asignado que le explique el impacto tributario de sus ingresos o le guíe en la elección de su fondo?",
+      "cliente_repregunta": "No, nunca me ha llamado nadie, solo me llega la cartola cuatrimestral.",
+      "ejecutivo_profundiza_cierra": "Ahí radica la diferencia. La administración es similar, pero el acompañamiento no. La asesoría adecuada le ayuda a planificar el retiro, evitar multas tributarias en APV y tomar decisiones informadas ante caídas del mercado. Le sugiero comparar el servicio que recibe hoy versus una asesoría estructurada y ver el impacto real en sus finanzas. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe evitar el discurso de marcas genérico y centrarse en contrastar la 'transacción' frente al 'servicio consultivo'. Debe destacar que la diferenciación real radica en la capacidad de estructurar soluciones a medida, como la asesoría tributaria avanzada de APV, simuladores de brecha previsional y la constancia de información transparente.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Qué servicios de valor agregado le entrega su AFP actual además de cobrar la comisión obligatoria?",
+        "¿Cuenta hoy con simuladores digitales interactivos para proyectar su pensión desde el celular?"
+      ],
+      "respuesta_30s": "La ley obliga a todas las AFP a administrar las cuentas de forma similar, pero la diferencia real se encuentra en la calidad de la asesoría, el seguimiento tributario de tu APV y la solidez técnica para mantenerte informado en periodos complejos.",
+      "cierre_recomendado": "Revisemos qué oportunidades de ahorro voluntario o beneficios tributarios no está aprovechando hoy en su actual AFP. ¿Comenzamos?"
+    }
   },
   {
     "id": "OBJ-006",
     "categoria": "Pensión",
-    "producto": ["Cuenta Obligatoria", "APV"],
-    "canal": ["Reunión"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV"
+    ],
+    "canal": [
+      "Reunión"
+    ],
     "nivel": "Avanzado",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Igual tendré una pensión baja, no vale la pena",
     "fondo_real": "El cliente está resignado y no ve palancas de acción.",
-    "preguntas_diagnostico": ["¿Sabe cuál es su pensión proyectada?", "¿Conoce su brecha previsional?", "¿Ha simulado APV o una mejor estrategia de fondos?"],
+    "preguntas_diagnostico": [
+      "¿Sabe cuál es su pensión proyectada?",
+      "¿Conoce su brecha previsional?",
+      "¿Ha simulado APV o una mejor estrategia de fondos?"
+    ],
     "respuesta_comercial": "Que el sistema tenga desafíos no significa que no haya nada que hacer. Podemos revisar fondo, APV, Cuenta 2, beneficios tributarios y planificación de retiro.",
-    "argumentos": ["La resignación no mejora el resultado.", "Hay variables que sí puede controlar.", "El diagnóstico convierte una preocupación general en plan personal."],
-    "herramientas": ["Simulador de pensión", "Cálculo de brecha", "Simulación APV"],
+    "argumentos": [
+      "La resignación no mejora el resultado.",
+      "Hay variables que sí puede controlar.",
+      "El diagnóstico convierte una preocupación general en plan personal."
+    ],
+    "herramientas": [
+      "Simulador de pensión",
+      "Cálculo de brecha",
+      "Simulación APV"
+    ],
     "cierre": "No hablemos de pensiones en general; hablemos de su pensión y de las decisiones que sí podemos tomar.",
     "whatsapp": "Entiendo la preocupación por la pensión. Precisamente por eso conviene revisar tu caso: fondo, APV, brecha y alternativas reales.",
     "llamada": "Veamos su caso concreto. Puede que existan acciones que hoy no está aprovechando.",
-    "errores_evitar": ["Prometer mejorar la pensión sin datos", "Discutir sobre el sistema", "No llevar a simulación."]
+    "errores_evitar": [
+      "Prometer mejorar la pensión sin datos",
+      "Discutir sobre el sistema",
+      "No llevar a simulación."
+    ],
+    "concepto_tecnico": "Brecha previsional (diferencia entre el último sueldo y la pensión proyectada) y tasa de reemplazo. La importancia del ahorro voluntario temprano como la principal palanca para acortar esta brecha debido al efecto multiplicador del tiempo.",
+    "explicacion_simple": "Aunque el sistema tenga desafíos, quedarse de brazos cruzados garantiza un resultado bajo. Tenemos herramientas como el APV, la correcta distribución de fondos y los beneficios fiscales que sí dependen de ti y pueden cambiar tu jubilación.",
+    "ejemplo_practico": "Un profesional que cotiza por el tope imponible y no realiza ahorro voluntario tendrá una tasa de reemplazo menor al 40% de su sueldo actual al jubilarse. Al sumar un APV mensual constante, logra elevar esa tasa de reemplazo sobre el 65%.",
+    "role_play": {
+      "cliente_plantea": "Igual tendré una pensión baja al jubilarme, así que no vale la pena preocuparse de la AFP.",
+      "ejecutivo_responde": "Es verdad que el sistema previsional enfrenta críticas. Sin embargo, si el escenario proyectado no es auspicioso, ¿cree que la solución es resignarse o buscar las herramientas que sí están bajo su control para mejorar su futuro?",
+      "cliente_repregunta": "No creo que un pequeño cambio hoy haga una gran diferencia en mi pensión si el sistema en general es malo.",
+      "ejecutivo_profundiza_cierra": "Cada peso que ahorra de forma voluntaria en APV o cada mes que optimiza el rendimiento de sus multifondos reduce su brecha previsional. No podemos arreglar el sistema general, pero sí podemos construir su plan personal. Déjeme mostrarle con el simulador de brecha cómo influye un ahorro mensual cómodo en su pensión final. ¿Revisamos la proyección?"
+    },
+    "modo_estudio": "El ejecutivo debe enfocar la conversación en la 'brecha previsional' y la 'tasa de reemplazo'. Es fundamental explicar de forma técnica que la jubilación obligatoria tiene un tope de cotización y que, para rentas medias y altas, el ahorro voluntario (APV) no es un lujo, sino una necesidad matemática para mantener su nivel de vida.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Ha calculado a cuánto ascenderá la diferencia en pesos entre su sueldo actual y su futura pensión?",
+        "¿Conoce las alternativas de ahorro voluntario con subsidio estatal que pueden mejorar su jubilación?"
+      ],
+      "respuesta_30s": "Es precisamente porque la pensión obligatoria tiene límites que debemos actuar. A través del APV, el beneficio tributario del Estado y una estrategia clara de multifondos, puedes controlar y mejorar sustancialmente el resultado de tu jubilación.",
+      "cierre_recomendado": "Hagamos una simulación rápida de su brecha previsional para ver dónde estamos parados y qué palancas podemos activar hoy. ¿Le parece?"
+    }
   },
   {
     "id": "OBJ-007",
     "categoria": "Sistema previsional",
-    "producto": ["Cuenta Obligatoria", "APV"],
-    "canal": ["Reunión"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV"
+    ],
+    "canal": [
+      "Reunión"
+    ],
     "nivel": "Avanzado",
     "sensibilidad": "Rojo",
     "objecion_cliente": "Prefiero volver al sistema antiguo / no creo en el sistema actual",
     "fondo_real": "El cliente plantea una opinión social o política.",
-    "preguntas_diagnostico": ["Más allá de la discusión del sistema, ¿ha revisado qué decisiones puede tomar hoy?", "¿Miramos su situación concreta?", "¿Su preocupación es pensión, seguridad, liquidez o confianza?"],
+    "preguntas_diagnostico": [
+      "Más allá de la discusión del sistema, ¿ha revisado qué decisiones puede tomar hoy?",
+      "¿Miramos su situación concreta?",
+      "¿Su preocupación es pensión, seguridad, liquidez o confianza?"
+    ],
     "respuesta_comercial": "Entiendo que el sistema genere debate. Mi rol no es defender una discusión política, sino ayudarlo a tomar mejores decisiones con las herramientas disponibles hoy.",
-    "argumentos": ["No entrar en confrontación ideológica.", "Volver al caso individual.", "Enfocarse en acciones disponibles."],
-    "herramientas": ["Diagnóstico personal", "Simulación de escenarios", "Plan de acción"],
+    "argumentos": [
+      "No entrar en confrontación ideológica.",
+      "Volver al caso individual.",
+      "Enfocarse en acciones disponibles."
+    ],
+    "herramientas": [
+      "Diagnóstico personal",
+      "Simulación de escenarios",
+      "Plan de acción"
+    ],
     "cierre": "Separemos la opinión sobre el sistema de la decisión personal. Veamos qué opciones tiene usted hoy.",
     "whatsapp": "Entiendo que el sistema genere debate. Lo práctico es revisar qué decisiones puedes tomar hoy con tus recursos y objetivos.",
     "llamada": "Le propongo enfocarnos en su caso, no en la discusión general.",
-    "errores_evitar": ["Debatir políticamente", "Defender el sistema de forma rígida", "Invalidar la opinión del cliente."]
+    "errores_evitar": [
+      "Debatir políticamente",
+      "Defender el sistema de forma rígida",
+      "Invalidar la opinión del cliente."
+    ],
+    "concepto_tecnico": "Funcionamiento de la capitalización individual frente al sistema de reparto. El derecho de propiedad sobre los fondos acumulados, la heredabilidad de los mismos y la flexibilidad de portabilidad.",
+    "explicacion_simple": "Más allá de las discusiones políticas o de reformas al sistema, hoy el dinero en tu cuenta individual es de tu propiedad, es heredable y es la única herramienta garantizada para tu jubilación. Lo práctico es optimizarlo hoy.",
+    "ejemplo_practico": "En caso de fallecimiento de un cotizante, la totalidad de su saldo acumulado en su cuenta de capitalización individual pasa a constituir herencia para su familia si no existen beneficiarios de pensión de sobrevivencia directa, resguardando el patrimonio familiar.",
+    "role_play": {
+      "cliente_plantea": "Prefiero que vuelva el sistema antiguo de reparto, no confío en las AFP.",
+      "ejecutivo_responde": "Entiendo perfectamente que el debate del sistema genere inquietud. Separando la discusión pública de lo práctico: hoy en día, ¿valora que los ahorros acumulados sean de su propiedad y heredables a su familia?",
+      "cliente_repregunta": "Sí, claro, pero igual encuentro injusto que las AFP administren la plata.",
+      "ejecutivo_profundiza_cierra": "Comprendo su punto. Sin embargo, mientras las reglas actuales existan, el saldo en su cuenta individual sigue siendo su patrimonio privado. Mi rol no es debatir de política, sino ayudarle a que ese patrimonio propio crezca lo máximo posible y pague menos impuestos. Miremos cómo optimizar su saldo actual bajo la normativa vigente. ¿Revisamos?"
+    },
+    "modo_estudio": "El ejecutivo debe evitar debates políticos o ideológicos a toda costa. Debe centrarse de forma técnica en las características legales de la cuenta de capitalización individual: propiedad privada, rentabilidad compuesta del mercado global, heredabilidad de fondos y la libertad de cambiarse de administradora y de multifondos.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Prefiere enfocar su estrategia en las variables que sí puede controlar hoy respecto a sus ahorros propios?",
+        "¿Tiene claridad sobre cómo funciona la heredabilidad de sus fondos de pensiones?"
+      ],
+      "respuesta_30s": "El debate del sistema es amplio, pero en lo práctico y legal, tus ahorros en la AFP son de tu propiedad y constituyen herencia. Lo fundamental hoy es gestionar tu saldo de la manera más rentable y eficiente posible.",
+      "cierre_recomendado": "Revisemos su cartola y optimicemos la asignación de sus ahorros de acuerdo a la ley actual. ¿Le parece coordinar?"
+    }
   },
   {
     "id": "OBJ-008",
     "categoria": "Incentivos indebidos",
-    "producto": ["Cuenta Obligatoria"],
-    "canal": ["Reunión", "Llamada"],
+    "producto": [
+      "Cuenta Obligatoria"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada"
+    ],
     "nivel": "Avanzado",
     "sensibilidad": "Rojo",
     "objecion_cliente": "Me cambio si me pagan",
     "fondo_real": "El cliente normalizó una mala práctica o busca beneficio inmediato.",
-    "preguntas_diagnostico": ["¿Busca un beneficio inmediato o una asesoría que mejore decisiones futuras?", "¿Le parece razonable decidir su ahorro previsional por un pago puntual?", "¿Qué valor tendría una asesoría seria?"],
+    "preguntas_diagnostico": [
+      "¿Busca un beneficio inmediato o una asesoría que mejore decisiones futuras?",
+      "¿Le parece razonable decidir su ahorro previsional por un pago puntual?",
+      "¿Qué valor tendría una asesoría seria?"
+    ],
     "respuesta_comercial": "Prefiero ser muy claro: yo no trabajo sobre incentivos indebidos. Lo que sí puedo ofrecerle es asesoría previsional, tributaria y de inversión para que tome una mejor decisión.",
-    "argumentos": ["Un pago puntual se acaba.", "La asesoría profesional genera confianza y trazabilidad.", "No se compite con malas prácticas."],
-    "herramientas": ["Declaración de buenas prácticas", "Simulación de oportunidad", "Registro de asesoría"],
+    "argumentos": [
+      "Un pago puntual se acaba.",
+      "La asesoría profesional genera confianza y trazabilidad.",
+      "No se compite con malas prácticas."
+    ],
+    "herramientas": [
+      "Declaración de buenas prácticas",
+      "Simulación de oportunidad",
+      "Registro de asesoría"
+    ],
     "cierre": "Si quiere tomar una buena decisión para su futuro, revisemos su caso con seriedad.",
     "whatsapp": "Prefiero ser transparente: no trabajo con incentivos indebidos. Sí puedo ayudarte con asesoría seria para revisar si hay una oportunidad real en tu caso.",
     "llamada": "Mi propuesta es profesional: asesoría, diagnóstico y una recomendación clara.",
-    "errores_evitar": ["Bromear con el incentivo", "Insinuar compensaciones", "Seguir sin aclarar posición ética."]
+    "errores_evitar": [
+      "Bromear con el incentivo",
+      "Insinuar compensaciones",
+      "Seguir sin aclarar posición ética."
+    ],
+    "concepto_tecnico": "Normativa de la Superintendencia de Pensiones en Chile sobre las buenas prácticas y prohibiciones de intermediación previsional (Compendio de Normas del Sistema de Pensiones). Prohibición absoluta de ofrecer, prometer o entregar incentivos, pagos o compensaciones económicas para la afiliación o traspaso.",
+    "explicacion_simple": "Por ley y por ética profesional, ningún ejecutivo serio ni AFP puede ofrecerte pagos ni incentivos para que te cambies. Lo que yo te ofrezco es una asesoría técnica seria y de largo plazo que vale mucho más que un incentivo puntual de momento.",
+    "ejemplo_practico": "Un ejecutivo informal ofreció una 'devolución' en efectivo a un cliente para cambiarse de AFP. El traspaso fue detectado y anulado por el regulador por infracción normativa, y el cliente perdió la oportunidad de recibir asesoría legítima que le hubiese optimizado sus impuestos anuales por montos muy superiores.",
+    "role_play": {
+      "cliente_plantea": "Un ejecutivo de otra parte me ofreció plata en efectivo si me cambiaba con él. ¿Usted me ofrece lo mismo?",
+      "ejecutivo_responde": "Le agradezco la transparencia. Prefiero ser muy directo: por normativa de la Superintendencia de Pensiones y por principios éticos corporativos, está estrictamente prohibido ofrecer incentivos económicos por afiliarse. ¿Para usted es importante tomar la decisión previsional basándose en una mala práctica o en una asesoría seria y segura?",
+      "cliente_repregunta": "Entiendo la norma, pero al final la plata en efectivo me sirve ahora y el futuro es incierto.",
+      "ejecutivo_profundiza_cierra": "Lo comprendo, pero considere esto: un pago informal por única vez es un monto menor que se consume rápido. Por el contrario, una asesoría profesional sostenida en el tiempo que le ayude a evitar pérdidas en multifondos o a estructurar su APV para recibir devoluciones de impuestos estatales le generará millones en el largo plazo de manera legal y segura. Permítame mostrarle el valor real de una planificación seria. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe saber que la intermediación bajo incentivos financieros es un delito normativo grave regulado por la Superintendencia de Pensiones. Debe mantener una postura de firmeza ética incuestionable, reorientando de inmediato la conversación hacia el valor acumulado de la asesoría profesional y los retornos financieros legítimos del APV y los multifondos.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Le parece seguro confiar su futuro previsional a intermediarios que operan al margen de la normativa del regulador?",
+        "¿Ha calculado cuánto puede rentar una asesoría legítima frente a un incentivo inmediato?"
+      ],
+      "respuesta_30s": "La Superintendencia prohíbe estrictamente cualquier tipo de pago por traspasos. Mi propuesta es profesional y legítima: una asesoría previsional, tributaria y de inversiones para optimizar tu ahorro acumulado con total transparencia y seguridad.",
+      "cierre_recommended": "Revisemos con seriedad su situación y planifiquemos sus metas bajo el marco regulatorio vigente. ¿Le parece?"
+    }
   },
   {
     "id": "OBJ-009",
     "categoria": "Fondos y riesgo",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Reunión"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "No quiero cambiarme de fondo porque puedo perder",
     "fondo_real": "El cliente teme volatilidad y confunde caída temporal con pérdida definitiva.",
-    "preguntas_diagnostico": ["¿Qué entiende por perder?", "¿Cuándo necesitará usar esos recursos?", "¿Conoce su perfil de riesgo?"],
+    "preguntas_diagnostico": [
+      "¿Qué entiende por perder?",
+      "¿Cuándo necesitará usar esos recursos?",
+      "¿Conoce su perfil de riesgo?"
+    ],
     "respuesta_comercial": "Es razonable preocuparse por las caídas. Pero la decisión de fondo debe tomarse por plazo, edad, tolerancia al riesgo y objetivo, no sólo por miedo al corto plazo.",
-    "argumentos": ["El riesgo se administra, no se elimina.", "Cambiar después de una caída puede materializar pérdidas.", "La estrategia debe evitar market timing impulsivo."],
-    "herramientas": ["Test de perfil de riesgo", "Guía de multifondos", "Gráfico de caídas y recuperaciones"],
+    "argumentos": [
+      "El riesgo se administra, no se elimina.",
+      "Cambiar después de una caída puede materializar pérdidas.",
+      "La estrategia debe evitar market timing impulsivo."
+    ],
+    "herramientas": [
+      "Test de perfil de riesgo",
+      "Guía de multifondos",
+      "Gráfico de caídas y recuperaciones"
+    ],
     "cierre": "Hagamos el diagnóstico de perfil y plazo antes de decidir un cambio.",
     "whatsapp": "El riesgo no se elimina, se administra. Antes de cambiar fondo conviene revisar plazo, edad, objetivo y perfil de riesgo.",
     "llamada": "No le recomendaré un cambio impulsivo; primero revisemos si hace sentido para su perfil.",
-    "errores_evitar": ["Minimizar el miedo", "Prometer que no habrá caídas", "Recomendar fondo sin diagnóstico."]
+    "errores_evitar": [
+      "Minimizar el miedo",
+      "Prometer que no habrá caídas",
+      "Recomendar fondo sin diagnóstico."
+    ],
+    "concepto_tecnico": "Volatilidad vs. pérdida real. Teoría de portafolios y diversificación de los multifondos (desde el Fondo A, más expuesto a renta variable internacional, hasta el Fondo E, enfocado en renta fija local). La importancia del horizonte de inversión y el ciclo de vida en la tolerancia al riesgo.",
+    "explicacion_simple": "Los mercados tienen variaciones normales y caídas temporales (volatilidad), pero no se transforman en pérdidas reales a menos que te cambies de fondo apresuradamente en el peor momento. El fondo correcto depende de tu edad y de cuándo vas a retirar tu dinero.",
+    "ejemplo_practico": "Un cotizante de 35 años entró en pánico por una caída temporal en el Fondo A en 2020 y se cambió al Fondo E. Al hacerlo, consolidó una pérdida de saldo. Si se hubiese mantenido en el Fondo A, sus ahorros habrían recuperado y superado su valor original solo 8 meses después.",
+    "role_play": {
+      "cliente_plantea": "No me quiero cambiar de AFP ni mover mis fondos porque he visto noticias de que los fondos caen y tengo miedo de perder mi plata.",
+      "ejecutivo_responde": "Es totalmente natural preocuparse por la volatilidad que sale en las noticias. Para comprender su situación, ¿cuántos años le quedan aproximadamente para pensionarse y cuándo planea hacer uso de estos recursos?",
+      "cliente_repregunta": "Me quedan más de 20 años para jubilar, pero igual me duele ver que el saldo baja de un mes a otro.",
+      "ejecutivo_profundiza_cierra": "Lo entiendo. La volatilidad mensual es normal en fondos de largo plazo como el A o B. Sin embargo, con un horizonte de 20 años, la historia muestra que la renta variable tiende a recuperarse y superar con creces a la renta fija. Moverse a fondos conservadores por miedo solo consolida las caídas temporales y le quita la opción de recuperarse. Revisemos su perfil de riesgo para asignarle la estrategia que le dé tranquilidad y rentabilidad en el plazo correcto. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe educar en finanzas básicas: explicar la volatilidad y los ciclos económicos. El pánico en caídas de mercado hace que los clientes vendan barato (se muevan a fondos conservadores como el E tras una caída del A/B) y compren caro, destruyendo patrimonio. La asignación de fondos debe basarse en el ciclo de vida y no en la coyuntura de prensa.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Su horizonte de ahorro para la pensión es de corto, mediano o largo plazo?",
+        "¿Conoce el test de perfil de riesgo oficial que define qué multifondo es adecuado para usted?"
+      ],
+      "respuesta_30s": "La volatilidad de los multifondos es parte normal de las inversiones de largo plazo. Una caída temporal no es una pérdida real a menos que te cambies de fondo apuradamente. Lo correcto es elegir el fondo según tus años restantes de trabajo y perfil de riesgo.",
+      "cierre_recomendado": "Realicemos el test de perfil de riesgo y analicemos cuál es la estrategia técnica más adecuada para su edad y objetivos. ¿Lo completamos?"
+    }
   },
   {
     "id": "OBJ-010",
     "categoria": "Rentabilidad",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Reunión", "Llamada"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Me cambio a la AFP que tenga mejor rentabilidad ahora",
     "fondo_real": "El cliente usa un ranking de corto plazo para una decisión de largo plazo.",
-    "preguntas_diagnostico": ["¿Qué periodo está mirando?", "¿Compara el mismo fondo?", "¿Qué haría si el próximo mes otra AFP aparece primera?"],
+    "preguntas_diagnostico": [
+      "¿Qué periodo está mirando?",
+      "¿Compara el mismo fondo?",
+      "¿Qué haría si el próximo mes otra AFP aparece primera?"
+    ],
     "respuesta_comercial": "Es natural mirar rentabilidad, pero hay que hacerlo bien. La rentabilidad de corto plazo puede cambiar rápidamente; la decisión previsional debe considerar consistencia, riesgo, horizonte, costos y asesoría.",
-    "argumentos": ["Rentabilidad pasada no garantiza rentabilidad futura.", "Los rankings de corto plazo son volátiles.", "La comparación debe ser coherente con el horizonte del cliente."],
-    "herramientas": ["Comparativo 1, 3, 5, 7 y 10 años", "Ranking por fondo", "Análisis de volatilidad"],
+    "argumentos": [
+      "Rentabilidad pasada no garantiza rentabilidad futura.",
+      "Los rankings de corto plazo son volátiles.",
+      "La comparación debe ser coherente con el horizonte del cliente."
+    ],
+    "herramientas": [
+      "Comparativo 1, 3, 5, 7 y 10 años",
+      "Ranking por fondo",
+      "Análisis de volatilidad"
+    ],
     "cierre": "Revisemos la rentabilidad con el plazo correcto. Si su pensión es de largo plazo, la comparación también debe ser de largo plazo.",
     "whatsapp": "Mirar rentabilidad es correcto, pero no sólo la foto del momento. Comparemos fondos y plazos para decidir con más claridad.",
     "llamada": "Le propongo revisar varios horizontes antes de tomar una decisión por el dato del momento.",
-    "errores_evitar": ["Prometer liderazgo futuro", "Usar sólo un plazo favorable", "No explicar riesgo."]
+    "errores_evitar": [
+      "Prometer liderazgo futuro",
+      "Usar sólo un plazo favorable",
+      "No explicar riesgo."
+    ],
+    "concepto_tecnico": "Consistencia de rentabilidad en horizontes de inversión multianuales (3, 5, 7 y 10 años) frente a la volatilidad de corto plazo (mensual o anual). La rentabilidad pasada no asegura rentabilidad futura. La rentabilidad debe analizarse neta de comisiones y ajustada al riesgo.",
+    "explicacion_simple": "Elegir una AFP mirando solo quién va ganando este mes es un error común. La jubilación es un proyecto de largo plazo, por lo que debemos comparar la consistencia histórica de rentabilidad a 5 o 10 años, y no la foto del momento.",
+    "ejemplo_practico": "Una AFP lideró el ranking de rentabilidad del Fondo A durante un semestre debido a una inversión puntual de alto riesgo, pero en los siguientes 5 años terminó en los últimos lugares de consistencia, afectando el saldo de quienes se cambiaron atraídos por el dato puntual.",
+    "role_play": {
+      "cliente_plantea": "Me voy a cambiar a la AFP que tenga la mejor rentabilidad del mes, que es la que me conviene hoy.",
+      "ejecutivo_responde": "Es comprensible querer estar con el ganador del momento. Sin embargo, dado que su pensión se construirá en el largo plazo, ¿ha comparado si esa misma AFP mantiene su liderazgo cuando miramos periodos más largos de 5 o 10 años?",
+      "cliente_repregunta": "No, solo vi la publicidad que decía que lideraban la rentabilidad de este último periodo.",
+      "ejecutivo_profundiza_cierra": "Es usual que las AFP usen el mes o trimestre que más les favorece para su publicidad. Pero buscar la AFP ganadora del mes es como cambiarse de fila constantemente en el supermercado. La clave es la consistencia histórica. Comparemos los promedios de rentabilidad oficial por multifondos en los últimos 5 y 10 años para tomar una decisión informada. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe dominar las estadísticas oficiales de la Superintendencia de Pensiones. Debe explicar que la rentabilidad previsional responde a ciclos de mercado a largo plazo. Mostrar que la consistencia y la gestión de riesgo son más importantes para el saldo final que los liderazgos efímeros de corto plazo.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Está comparando rentabilidades en el mismo multifondo y bajo el mismo periodo de tiempo?",
+        "¿Prefiere estabilidad y consistencia histórica o rentabilidades volátiles de corto plazo?"
+      ],
+      "respuesta_30s": "Comparar rentabilidades de corto plazo induce a errores. Como tu ahorro previsional es a largo plazo, la comparación correcta debe basarse en la consistencia de rentabilidad histórica de los últimos 5 a 10 años para asegurar un crecimiento sostenido de tus fondos.",
+      "cierre_recomendado": "Revisemos las tablas comparativas de rentabilidad histórica a 5 y 10 años publicadas por el regulador para ver el panorama completo. ¿Le parece?"
+    }
   },
   {
     "id": "OBJ-011",
     "categoria": "Ahorro voluntario",
-    "producto": ["APV", "Cuenta 2"],
-    "canal": ["Reunión", "WhatsApp"],
+    "producto": [
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión",
+      "WhatsApp"
+    ],
     "nivel": "Básico",
     "sensibilidad": "Verde",
     "objecion_cliente": "No tengo dinero para ahorrar",
     "fondo_real": "El cliente no identificó capacidad de ahorro o no conectó ahorro con objetivo.",
-    "preguntas_diagnostico": ["¿Cuál sería un monto que no afecte su presupuesto?", "¿Su objetivo es pensión, impuestos, liquidez o un proyecto?", "¿Partimos bajo y revisamos en seis meses?"],
+    "preguntas_diagnostico": [
+      "¿Cuál sería un monto que no afecte su presupuesto?",
+      "¿Su objetivo es pensión, impuestos, liquidez o un proyecto?",
+      "¿Partimos bajo y revisamos en seis meses?"
+    ],
     "respuesta_comercial": "No se trata de partir con un monto grande, sino de partir. Podemos comenzar con un monto cómodo, medir avance y ajustar después. Lo importante es ganar tiempo.",
-    "argumentos": ["El hábito es más importante que el monto inicial.", "Partir pequeño reduce fricción.", "APV y Cuenta 2 responden a objetivos distintos."],
-    "herramientas": ["Simulador de aporte mensual", "Tabla aporte diario/mensual", "Comparativo APV vs Cuenta 2"],
+    "argumentos": [
+      "El hábito es más importante que el monto inicial.",
+      "Partir pequeño reduce fricción.",
+      "APV y Cuenta 2 responden a objetivos distintos."
+    ],
+    "herramientas": [
+      "Simulador de aporte mensual",
+      "Tabla aporte diario/mensual",
+      "Comparativo APV vs Cuenta 2"
+    ],
     "cierre": "Partamos con un monto que no le duela y dejamos agendada una revisión para aumentarlo cuando sea posible.",
     "whatsapp": "No necesitas partir con un monto grande. Podemos comenzar con algo cómodo, ganar tiempo y revisar más adelante si conviene aumentarlo.",
     "llamada": "La idea es crear el hábito sin afectar su presupuesto.",
-    "errores_evitar": ["Forzar un monto alto", "No preguntar objetivo", "Hablar sólo de pensión a clientes jóvenes."]
+    "errores_evitar": [
+      "Forzar un monto alto",
+      "No preguntar objetivo",
+      "Hablar sólo de pensión a clientes jóvenes."
+    ],
+    "concepto_tecnico": "Estrategias de finanzas personales, presupuesto y ahorro previsional voluntario hormiga (aportes pequeños sistemáticos). El principio de 'pagarse a uno mismo primero' y la automatización del ahorro mensual vía descuento por planilla (APV).",
+    "explicacion_simple": "No necesitas un gran monto para empezar a ahorrar. En el ahorro, la constancia y el tiempo son más importantes que el monto inicial. Puedes partir con un aporte pequeño automatizado que no afecte tu día a día.",
+    "ejemplo_practico": "Un cotizante joven comenzó ahorrando $15.000 mensuales en APV Régimen A mediante descuento automático de su sueldo. Al cabo de 10 años, gracias al interés compuesto y a la bonificación estatal del 15%, acumuló más de $3.000.000, un monto significativamente mayor a la suma neta de sus aportes.",
+    "role_play": {
+      "cliente_plantea": "No tengo dinero extra para ahorrar, con suerte llego a fin de mes con mis gastos actuales.",
+      "ejecutivo_responde": "Entiendo perfectamente su situación, el presupuesto familiar hoy está muy ajustado. Si existiera la posibilidad de separar un monto muy pequeño, por ejemplo $10.000 al mes de forma automatizada, ¿sentiría que afecta de manera crítica sus gastos diarios?",
+      "cliente_repregunta": "$10.000 no cambian mi vida, pero ¿de qué sirve ahorrar una cantidad tan pequeña para la vejez?",
+      "ejecutivo_profundiza_cierra": "Sirve de mucho, porque activa dos motores: el hábito del ahorro y el interés compuesto en el tiempo. Además, en el Régimen A de APV, el Estado le regala un 15% adicional sobre lo que ahorre al año. Esos $10.000 mensuales se transforman en un fondo relevante con los años. Partamos con ese monto cómodo y lo revisamos en 6 meses. ¿Le parece bien?"
+    },
+    "modo_estudio": "El ejecutivo debe ser un asesor financiero personal. Debe explicar que esperar a tener excedentes de ingresos para empezar a ahorrar es un error conductual. Enseñar la técnica del descuento por planilla (APV), que reduce la fricción psicológica de ahorrar porque el dinero se destina antes de estar disponible en la cuenta corriente del cliente.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Prefiere iniciar con un aporte mínimo para generar el hábito de ahorro o seguir postergando su planificación?",
+        "¿Conoce el beneficio estatal que le regala un 15% sobre su ahorro anual voluntario?"
+      ],
+      "respuesta_30s": "No necesitas montos grandes para empezar a construir tu futuro. La clave es el hábito: partir con un aporte mensual pequeño y cómodo automatizado por planilla. El tiempo y el interés compuesto harán el resto del trabajo por ti.",
+      "cierre_recomendado": "Activemos un ahorro mínimo inicial de $10.000 o $20.000 mensuales en su APV y veamos cómo se proyecta. ¿Le parece bien?"
+    }
   },
   {
     "id": "OBJ-012",
     "categoria": "Ahorro voluntario",
-    "producto": ["APV", "Cuenta 2"],
-    "canal": ["Reunión"],
+    "producto": [
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Prefiero tener mi dinero en depósitos, fondos mutuos, seguros o propiedades",
     "fondo_real": "El cliente ya invierte y no ve a la AFP como plataforma complementaria.",
-    "preguntas_diagnostico": ["¿Qué objetivo cumple cada inversión?", "¿Conoce todos los costos?", "¿Qué parte está destinada a pensión y qué parte a liquidez?"],
+    "preguntas_diagnostico": [
+      "¿Qué objetivo cumple cada inversión?",
+      "¿Conoce todos los costos?",
+      "¿Qué parte está destinada a pensión y qué parte a liquidez?"
+    ],
     "respuesta_comercial": "Me parece positivo que ya invierta. No le propongo abandonar lo que tiene, sino ordenar objetivos. APV y Cuenta 2 pueden complementar su estrategia, no necesariamente reemplazarla.",
-    "argumentos": ["Diversificar es asignar cada herramienta a un objetivo.", "APV puede aportar beneficios tributarios.", "Cuenta 2 puede servir para ahorro flexible."],
-    "herramientas": ["Matriz comparativa", "Comparación de costos", "Simulación tributaria APV A/B"],
+    "argumentos": [
+      "Diversificar es asignar cada herramienta a un objetivo.",
+      "APV puede aportar beneficios tributarios.",
+      "Cuenta 2 puede servir para ahorro flexible."
+    ],
+    "herramientas": [
+      "Matriz comparativa",
+      "Comparación de costos",
+      "Simulación tributaria APV A/B"
+    ],
     "cierre": "Revisemos una parte de su ahorro. Si la comparación muestra valor, diversificamos; si no, mantenemos su estrategia actual.",
     "whatsapp": "Muy bien que ya inviertas. La idea no es reemplazar todo, sino ver si APV o Cuenta 2 complementan mejor tus objetivos.",
     "llamada": "Compararemos objetivo, costo, liquidez y beneficio tributario.",
-    "errores_evitar": ["Descalificar otras inversiones", "Querer capturar todo el ahorro", "No comparar costos reales."]
+    "errores_evitar": [
+      "Descalificar otras inversiones",
+      "Querer capturar todo el ahorro",
+      "No comparar costos reales."
+    ],
+    "concepto_tecnico": "Comparación de estructuras de costos y eficiencia tributaria de vehículos de inversión (FFMM, depósitos a plazo, bienes raíces, seguros de vida con ahorro) frente a los productos previsionales voluntarios (APV Régimen A y B, Cuenta 2). Las ventajas de economías de escala de las AFP en administración de carteras globales.",
+    "explicacion_simple": "Es excelente que diversifiques tu dinero. Sin embargo, comparado con los fondos mutuos o propiedades, los productos de la AFP (APV y Cuenta 2) tienen comisiones significativamente más bajas y cuentan con beneficios tributarios únicos que potencian tu rentabilidad desde el primer día.",
+    "ejemplo_practico": "Un cliente invertía en un Fondo Mutuo balanceado con una comisión (TAC) del 2.5% anual. Al traspasar esa inversión a una Cuenta 2 de AFP con perfil similar, su comisión anual bajó a solo 0.60%, ahorrándose casi un 2% anual en comisiones, dinero que pasó a sumar directamente a su rentabilidad acumulada.",
+    "role_play": {
+      "cliente_plantea": "Prefiero invertir mis ahorros en propiedades, fondos mutuos o depósitos a plazo en mi banco antes que en una AFP.",
+      "ejecutivo_responde": "Lo felicito por invertir activamente; diversificar es una gran estrategia. Permítame consultarle: ¿ha comparado las comisiones anuales (TAC) que le cobra su banco en fondos mutuos frente a las comisiones de la AFP, y si esas inversiones le entregan devoluciones de impuestos?",
+      "cliente_repregunta": "En el banco me atienden rápido y me dicen que es seguro, no me he fijado mucho en las comisiones ni en el tema tributario.",
+      "ejecutivo_profundiza_cierra": "Es lo habitual. Los bancos suelen cobrar comisiones de administración anuales que duplican o triplican las de la Cuenta 2 o el APV de las AFP. Además, el APV le permite rebajar su base de impuestos o recibir un bono del 15% del Estado, beneficios que las inversiones bancarias tradicionales no tienen. Le propongo hacer una comparación objetiva de costos y tributación entre sus instrumentos actuales y los previsionales. ¿Revisamos los datos?"
+    },
+    "modo_estudio": "El ejecutivo debe manejar conceptos de TAC (Tasa Anual de Costos) y eficiencia fiscal. Debe saber argumentar que el APV cuenta con incentivos tributarios diseñados por ley (Art. 20 L del DL 3500) que superan la rentabilidad bruta de casi cualquier activo tradicional de renta fija. Explicar también que las AFP manejan carteras institucionales gigantescas, accediendo a costos de corretaje global mucho menores que un inversionista retail en un banco.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Conoce el costo anual de administración (TAC) de sus fondos mutuos actuales?",
+        "¿Está aprovechando los incentivos tributarios exclusivos del APV para aumentar sus retornos?"
+      ],
+      "respuesta_30s": "Diversificar es correcto, pero debes mirar la eficiencia: las comisiones de las AFP en APV y Cuenta 2 suelen ser mucho menores que las de los bancos y fondos mutuos tradicionales. Además, el APV ofrece incentivos tributarios estatales directos que ninguna inversión bancaria común posee.",
+      "cierre_recomendado": "Hagamos un ejercicio comparativo de costos y beneficios tributarios para optimizar una parte de su ahorro excedente. ¿Qué le parece?"
+    }
   },
   {
     "id": "OBJ-013",
     "categoria": "APV",
-    "producto": ["APV"],
-    "canal": ["Reunión"],
+    "producto": [
+      "APV"
+    ],
+    "canal": [
+      "Reunión"
+    ],
     "nivel": "Avanzado",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Estoy muy cerca de pensionarme; ya no tiene sentido hacer APV",
     "fondo_real": "El cliente cree que APV sólo sirve para aumentar pensión de largo plazo.",
-    "preguntas_diagnostico": ["¿Su objetivo es aumentar pensión o complementar ingresos?", "¿Ha evaluado el APV por beneficio tributario?", "¿Quiere revisar APV versus Cuenta 2?"],
+    "preguntas_diagnostico": [
+      "¿Su objetivo es aumentar pensión o complementar ingresos?",
+      "¿Ha evaluado el APV por beneficio tributario?",
+      "¿Quiere revisar APV versus Cuenta 2?"
+    ],
     "respuesta_comercial": "Mientras antes se ahorra, mayor impacto puede tener. Pero eso no significa que hoy no tenga sentido. A esta altura el objetivo puede ser complementar ingresos, ordenar impuestos o preparar la transición al retiro.",
-    "argumentos": ["El APV no se evalúa sólo por aumento de pensión.", "Cerca de la jubilación puede servir para planificación tributaria o transición.", "La recomendación depende de monto, plazo y necesidad de uso."],
-    "herramientas": ["Simulación de retiro", "Comparativo APV vs Cuenta 2", "Análisis tributario"],
+    "argumentos": [
+      "El APV no se evalúa sólo por aumento de pensión.",
+      "Cerca de la jubilación puede servir para planificación tributaria o transición.",
+      "La recomendación depende de monto, plazo y necesidad de uso."
+    ],
+    "herramientas": [
+      "Simulación de retiro",
+      "Comparativo APV vs Cuenta 2",
+      "Análisis tributario"
+    ],
     "cierre": "No lo miremos como ahorrar tarde, sino como ordenar mejor la transición a la pensión.",
     "whatsapp": "Aunque estés cerca de pensionarte, puede tener sentido revisar APV o Cuenta 2 según objetivo, plazo y tributación.",
     "llamada": "Veamos si el objetivo es pensión, liquidez o eficiencia tributaria.",
-    "errores_evitar": ["Insistir en APV sin objetivo", "No revisar liquidez", "Prometer mejora significativa sin simulación."]
+    "errores_evitar": [
+      "Insistir en APV sin objetivo",
+      "No revisar liquidez",
+      "Prometer mejora significativa sin simulación."
+    ],
+    "concepto_tecnico": "Planificación financiera de transición al retiro, optimización tributaria de rentas de fin de carrera y estrategias de retiros libres de impuestos. Uso del APV en Régimen B para disminuir la base imponible del Impuesto Global Complementario en los años de mayores ingresos del cotizante.",
+    "explicacion_simple": "Estar cerca de pensionarse es justamente el periodo donde el ahorro voluntario (APV) puede ser más conveniente. Al estar en tu tramo de ingresos más alto, puedes ahorrar en APV Régimen B, rebajar de forma inmediata tu pago de impuestos anuales y retirar ese capital de manera planificada y eficiente al jubilarte.",
+    "ejemplo_practico": "Un cotizante de 63 años con ingresos altos aporta al APV Régimen B durante sus últimos dos años de trabajo. Gracias a esto, reduce su base imponible del impuesto global complementario, obteniendo una devolución de impuestos del 35% del monto ahorrado en cada operación anual, recuperando liquidez inmediata antes del retiro.",
+    "role_play": {
+      "cliente_plantea": "Ya tengo 62 años y me voy a jubilar luego, no tiene ningún sentido que empiece a hacer APV ahora.",
+      "ejecutivo_responde": "Es un pensamiento común creer que el APV es solo para jóvenes. Sin embargo, dado que está en sus años de mayor sueldo y paga más impuestos, ¿ha evaluado cómo el APV puede servirle para rebajar de forma inmediata sus impuestos de este año?",
+      "cliente_repregunta": "No sabía que servía para eso a mi edad, pensé que era solo para aumentar la pensión a largo plazo.",
+      "ejecutivo_profundiza_cierra": "Así es, el APV tiene un doble propósito. En su etapa actual, el beneficio tributario es inmediato: el Estado le devuelve un porcentaje importante de lo que ahorra en su declaración de renta. Además, ese dinero acumulado puede retirarlo al jubilarse con una carga tributaria mucho menor o libre de impuestos si lo planificamos bien. Evaluemos el impacto tributario de sus últimos años de cotización. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe dominar la planificación del retiro (finanzas de transición). Debe explicar al cliente senior que el APV Régimen B funciona como un excelente diferidor de impuestos en la época de mayores ingresos laborales del cliente. Los fondos acumulados en APV pueden ser retirados al momento de jubilarse bajo modalidades eficientes de tributación, maximizando la liquidez neta del nuevo pensionado.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Sabe que en sus últimos años de trabajo puede usar el APV para rebajar impuestos de forma inmediata en su declaración anual?",
+        "¿Tiene definida la estrategia tributaria de retiro para sus fondos acumulados?"
+      ],
+      "respuesta_30s": "Estar cerca de jubilarte es el mejor momento para el APV. En esta etapa de ingresos altos, el APV te permite rebajar tu base de impuestos globales y obtener una devolución estatal inmediata, acumulando capital de forma muy eficiente justo antes del retiro.",
+      "cierre_recomendado": "Simulemos el beneficio tributario que podría obtener en su próxima declaración de renta mediante un aporte a APV. ¿Lo revisamos?"
+    }
   },
   {
     "id": "OBJ-014",
     "categoria": "APV",
-    "producto": ["APV"],
-    "canal": ["Reunión", "Llamada"],
+    "producto": [
+      "APV"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "No entiendo la diferencia entre APV A y APV B",
     "fondo_real": "El cliente necesita traducir el beneficio tributario a una decisión simple.",
-    "preguntas_diagnostico": ["¿Cuál es su renta imponible?", "¿Paga impuesto global complementario?", "¿Busca beneficio hoy o al retiro?"],
+    "preguntas_diagnostico": [
+      "¿Cuál es su renta imponible?",
+      "¿Paga impuesto global complementario?",
+      "¿Busca beneficio hoy o al retiro?"
+    ],
     "respuesta_comercial": "El Régimen A suele ser atractivo cuando se busca bonificación estatal y no hay tasa de impuesto alta. El Régimen B suele ser más atractivo para rentas altas que buscan rebajar base imponible. Pero hay que simular con sus datos.",
-    "argumentos": ["No se elige régimen por intuición.", "La renta y el monto de aporte cambian la recomendación.", "La simulación evita errores tributarios."],
-    "herramientas": ["Simulador APV A/B", "Ficha tributaria", "Comparativo de beneficio"],
+    "argumentos": [
+      "No se elige régimen por intuición.",
+      "La renta y el monto de aporte cambian la recomendación.",
+      "La simulación evita errores tributarios."
+    ],
+    "herramientas": [
+      "Simulador APV A/B",
+      "Ficha tributaria",
+      "Comparativo de beneficio"
+    ],
     "cierre": "Con sus datos podemos determinar qué régimen le conviene más. La clave es no elegir APV a ciegas.",
     "whatsapp": "APV A y B tienen beneficios distintos. Lo correcto es simular con tu renta y aporte para elegir el régimen adecuado.",
     "llamada": "Necesito algunos datos tributarios para recomendar el régimen correcto.",
-    "errores_evitar": ["Recomendar A o B sin datos", "Usar jerga tributaria", "No explicar condiciones de retiro."]
+    "errores_evitar": [
+      "Recomendar A o B sin datos",
+      "Usar jerga tributaria",
+      "No explicar condiciones de retiro."
+    ],
+    "concepto_tecnico": "Regímenes tributarios del APV según el Artículo 20 L del DL 3500. Régimen A: bonificación estatal directa del 15% sobre el ahorro neto anual (tope de 6 UTM anuales), óptimo para tasas impositivas marginales bajas o exentas. Régimen B: rebaja directa de la base imponible del Impuesto Global Complementario (tope de 600 UF anuales por planilla o 50 UF mensuales), óptimo para rentas altas con tasas marginales superiores al 15%.",
+    "explicacion_simple": "Es muy sencillo: el Régimen A es ideal si tu sueldo mensual es menor a $3.500.000, ya que el Estado te regala un 15% extra sobre lo que logres ahorrar. El Régimen B conviene si tu sueldo es más alto, porque te permite rebajar tus impuestos de forma directa en tu declaración anual.",
+    "ejemplo_practico": "Un cotizante con una renta de $1.200.000 al mes ahorra $500.000 en el año en APV Régimen A; el Estado le regala $75.000 (15%). Otro cotizante con renta de $4.500.000 al mes ahorra $2.000.000 en Régimen B; al estar en un tramo alto de impuestos, el Estado le devuelve $700.000 (35%) en su declaración de renta.",
+    "role_play": {
+      "cliente_plantea": "No entiendo nada de la diferencia entre el APV A y el APV B, me enreda la explicación tributaria.",
+      "ejecutivo_responde": "No se preocupe, es un tema técnico pero se puede resumir muy simple. ¿Cuál es su nivel de renta líquida aproximada o en qué tramo de impuestos se encuentra habitualmente?",
+      "cliente_repregunta": "Gano alrededor de $1.800.000 líquidos mensuales. ¿Cuál me convendría más a mí?",
+      "ejecutivo_profundiza_cierra": "Para su nivel de renta, el Régimen A suele ser el más conveniente. Por cada $100.000 que usted ahorre, el Estado le sumará un bono de $15.000 directamente a su cuenta de ahorro. El Régimen B se reserva para sueldos más altos que buscan rebajar su base de impuestos. Hagamos una simulación exacta con su liquidación para confirmar el tramo óptimo y dejarlo configurado de forma segura. ¿Comenzamos?"
+    },
+    "modo_estudio": "El ejecutivo debe ser un experto tributario previsional. Debe dominar las matemáticas de optimización de regímenes. Debe explicar que el Régimen A tiene una bonificación con tope anual (6 UTM) y que el Régimen B permite rebajar impuestos con un tope mucho más alto (600 UF). Equivocarse en la recomendación de régimen tributario puede significar una pérdida directa de rentabilidad o una carga tributaria innecesaria para el cliente.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Conoce su tramo de impuesto global complementario según sus ingresos anuales?",
+        "¿Busca una bonificación fiscal directa a su cuenta o rebajar el pago de sus impuestos de este año?"
+      ],
+      "respuesta_30s": "El Régimen A te entrega un bono del 15% estatal sobre tu ahorro anual, ideal para rentas medias o bajas. El Régimen B te permite descontar el ahorro directamente de tu base imponible de impuestos, siendo muy atractivo para rentas altas.",
+      "cierre_recomendado": "Revisemos sus ingresos imponibles del año y definamos matemáticamente qué régimen maximiza su retorno estatal. ¿Le parece?"
+    }
   },
   {
     "id": "OBJ-015",
     "categoria": "Liquidez",
-    "producto": ["APV", "Cuenta 2"],
-    "canal": ["Reunión", "WhatsApp"],
+    "producto": [
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión",
+      "WhatsApp"
+    ],
     "nivel": "Básico",
     "sensibilidad": "Verde",
     "objecion_cliente": "No quiero amarrar mi plata",
     "fondo_real": "El cliente teme perder liquidez o usar mal el producto.",
-    "preguntas_diagnostico": ["¿Cuándo cree que podría necesitar el dinero?", "¿El objetivo es pensión o proyecto?", "¿Prefiere beneficio tributario o flexibilidad?"],
+    "preguntas_diagnostico": [
+      "¿Cuándo cree que podría necesitar el dinero?",
+      "¿El objetivo es pensión o proyecto?",
+      "¿Prefiere beneficio tributario o flexibilidad?"
+    ],
     "respuesta_comercial": "Es importante separar objetivo de producto. Si el objetivo es pensión y beneficio tributario, APV puede ser adecuado. Si el objetivo es liquidez o un proyecto de mediano plazo, quizás corresponde revisar Cuenta 2.",
-    "argumentos": ["El producto se elige después del objetivo.", "Liquidez y beneficio tributario no siempre se optimizan al mismo tiempo.", "Cuenta 2 puede ser más flexible para ciertos objetivos."],
-    "herramientas": ["Árbol de decisión APV/Cuenta 2", "Matriz objetivo-liquidez", "Simulación de escenarios"],
+    "argumentos": [
+      "El producto se elige después del objetivo.",
+      "Liquidez y beneficio tributario no siempre se optimizan al mismo tiempo.",
+      "Cuenta 2 puede ser más flexible para ciertos objetivos."
+    ],
+    "herramientas": [
+      "Árbol de decisión APV/Cuenta 2",
+      "Matriz objetivo-liquidez",
+      "Simulación de escenarios"
+    ],
     "cierre": "Definamos primero el objetivo y después elegimos la herramienta correcta.",
     "whatsapp": "Totalmente válido cuidar la liquidez. Primero definamos si el objetivo es pensión, impuestos o proyecto; después elegimos APV o Cuenta 2.",
     "llamada": "No quiero amarrarle recursos si su objetivo requiere flexibilidad.",
-    "errores_evitar": ["Vender APV para un objetivo de corto plazo", "No explicar condiciones", "No ofrecer Cuenta 2 como alternativa."]
+    "errores_evitar": [
+      "Vender APV para un objetivo de corto plazo",
+      "No explicar condiciones",
+      "No ofrecer Cuenta 2 como alternativa."
+    ],
+    "concepto_tecnico": "Liquidez y condiciones de retiro de fondos en el Sistema de Pensiones. Cuenta 2 (Cuenta de Ahorro Voluntario): hasta 24 retiros anuales sin penalización, con tributación sobre la rentabilidad real bajo régimen general (57 bis / impuesto por ganancia de capital). APV: permite retiros extraordinarios antes de jubilar, pero con una retención tributaria del 15% transitoria y un recargo en el impuesto global complementario (Régimen B) o devolución de la bonificación del 15% (Régimen A).",
+    "explicacion_simple": "Si tu objetivo requiere liquidez para proyectos de mediano plazo (como viajes, estudios o pie de casa), la Cuenta 2 es ideal porque te permite retirar tu dinero de forma rápida y sin multas. El APV tiene restricciones y multas por retiro anticipado porque su fin exclusivo es mejorar tu jubilación.",
+    "ejemplo_practico": "Un cliente quiere ahorrar para dar el pie de un departamento en 3 años. Abre una Cuenta 2 de AFP en un fondo balanceado. Transcurridos los 3 años, retira la totalidad del dinero acumulado de forma digital en 4 días hábiles, pagando un impuesto mínimo únicamente sobre la ganancia real que generó el fondo, no sobre su capital.",
+    "role_play": {
+      "cliente_plantea": "No me gusta la idea del APV o la AFP porque no quiero amarrar mi plata ni perder liquidez si tengo una emergencia.",
+      "ejecutivo_responde": "Es un punto muy válido; resguardar la liquidez ante imprevistos es fundamental. Permítame consultarle: ¿el ahorro que planea realizar es para una emergencia de corto plazo, para un proyecto de mediano plazo o exclusivamente para su jubilación?",
+      "cliente_repregunta": "Quiero ahorrar para cambiar el auto en 2 años, pero también quiero que me rinda bien y poder sacarlo rápido.",
+      "ejecutivo_profundiza_cierra": "Para ese objetivo, el APV no es la herramienta adecuada debido a las retenciones tributarias por retiro anticipado. En su caso, la Cuenta 2 es la opción perfecta: tiene comisiones muy bajas, rentabiliza en los mismos multifondos previsionales y le permite retirar su capital de forma rápida y digital cuando lo necesite. ¿Revisamos cómo estructurar un plan para su Cuenta 2 con ese plazo de 2 años?"
+    },
+    "modo_estudio": "El ejecutivo debe diferenciar la naturaleza financiera de los productos. El APV es de largo plazo, con penalizaciones por retiro anticipado diseñadas para desincentivar el gasto de fondos de jubilación. La Cuenta 2 de AFP es una cuenta de ahorro de propósito general y flexible. Funciona de manera similar a un fondo mutuo, pero con ventajas de costos administrativas muy competitivas y un tratamiento tributario favorable sobre la rentabilidad real.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿En qué plazo estima que podría necesitar hacer uso de estos recursos ahorrados?",
+        "¿Prioriza la rentabilidad tributaria a largo plazo para jubilación o la flexibilidad de retiros en el corto plazo?"
+      ],
+      "respuesta_30s": "Si buscas flexibilidad y proyectos a mediano plazo, la Cuenta 2 te ofrece liquidez rápida, comisiones muy bajas y retiros sin multas. Si tu foco es exclusivamente la jubilación y la optimización de impuestos, el APV es la herramienta adecuada.",
+      "cierre_recommended": "Definamos sus plazos de ahorro y asignemos el producto previsional que mejor equilibre rendimiento y liquidez. ¿Le parece?"
+    }
   },
   {
     "id": "OBJ-016",
     "categoria": "Pensión",
-    "producto": ["Cuenta Obligatoria", "APV"],
-    "canal": ["Reunión", "Llamada"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Prefiero quedarme donde estoy porque mi pensión será muy baja igual",
@@ -289,7 +893,10 @@
       "El diagnóstico permite ver si hay margen de acción.",
       "Pequeñas acciones hoy marcan diferencia a largo plazo."
     ],
-    "herramientas": ["Simulador de pensión", "Cálculo de brecha"],
+    "herramientas": [
+      "Simulador de pensión",
+      "Cálculo de brecha"
+    ],
     "cierre": "Si después del análisis no hay una oportunidad, lo dejamos claro. Pero si existe una brecha que podemos trabajar, sería una lástima no verla a tiempo.",
     "whatsapp": "Entiendo la preocupación. Precisamente si la proyección de pensión es baja, conviene analizar si existen opciones de mejora como la estrategia de fondos o el ahorro voluntario. Lo revisamos con tus datos.",
     "llamada": "Le propongo revisar si hoy está aprovechando todas las alternativas para mejorar su escenario. Si no hay oportunidad, se lo diré con claridad.",
@@ -297,13 +904,38 @@
       "Aceptar la resignación del cliente.",
       "Prometer soluciones mágicas.",
       "No ofrecer un diagnóstico concreto."
-    ]
+    ],
+    "concepto_tecnico": "Inercia previsional y costo de oportunidad de la no-acción. El análisis de variables endógenas (multifondos, comisiones, APV, beneficios tributarios) frente a variables exógenas (coyuntura del sistema de pensiones). La pensión se construye de forma personal e individual.",
+    "explicacion_simple": "Quedarse en la misma AFP sin revisar tu cuenta solo por resignación garantiza un resultado bajo. Precisamente si crees que tu pensión proyectada no es la que esperas, es cuando más debes actuar: optimizar tu multifondo, ahorrar de forma voluntaria y aprovechar los beneficios fiscales del Estado para acortar esa brecha.",
+    "ejemplo_practico": "Un cotizante resignado con su pensión se mantuvo en el Fondo E por 10 años estando a 25 años de jubilar. Al no tomar asesoría, su saldo acumulado creció a una tasa muy menor. Si se hubiese asesorado para estar en un fondo más coherente con su edad y plazo, su saldo acumulado se habría incrementado en más de un 40% en el mismo periodo.",
+    "role_play": {
+      "cliente_plantea": "Prefiero dejar las cosas como están. Al final, mi pensión va a ser muy baja de todos modos, no vale la pena el esfuerzo.",
+      "ejecutivo_responde": "Entiendo que el panorama general pueda parecer desmotivador. Sin embargo, si la proyección de pensión es baja, ¿cree que mantenerse inactivo mejorará el escenario o consolidará ese resultado insatisfactorio?",
+      "cliente_repregunta": "Probablemente no mejore, pero hacer cambios me parece perder el tiempo si el resultado final va a ser malo igual.",
+      "ejecutivo_profundiza_cierra": "La diferencia entre un cotizante inactivo y uno que toma asesoría sistemática para optimizar sus multifondos, planificar tributariamente y aportar un ahorro mínimo voluntario puede traducirse en duplicar su futura pensión. No le propongo una solución mágica, sino un diagnóstico técnico de lo que sí está en sus manos controlar. Hagamos los números y veamos la diferencia. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe romper la inercia del cliente mediante datos. Debe mostrar que la inactividad previsional (inercia de fondos) tiene un costo de oportunidad altísimo a lo largo de 20 o 30 años laborales. El ejecutivo debe posicionarse como el profesional que ayuda al cliente a enfocarse en las variables que sí dependen de él (controlables) y descartar el ruido del entorno.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Está dispuesto a aceptar una pensión proyectada baja sin antes revisar si existen oportunidades de optimización en sus fondos?",
+        "¿Sabe qué porcentaje de su sueldo actual representará su jubilación si se mantiene inactivo?"
+      ],
+      "respuesta_30s": "Si tu escenario proyectado es bajo, quedarte inmóvil es la peor alternativa. A través de un diagnóstico simple, podemos optimizar tu multifondo, ordenar beneficios impositivos y planificar aportes voluntarios que cambien de forma real tu futura jubilación.",
+      "cierre_recomendado": "Revisemos su cartola histórica y proyectemos alternativas reales de mejora en base a sus datos. ¿Comenzamos?"
+    }
   },
   {
     "id": "OBJ-017",
     "categoria": "Servicio",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Reunión", "Llamada"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada"
+    ],
     "nivel": "Intermedio",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "No me cambio porque antes me atendieron pésimo",
@@ -319,7 +951,11 @@
       "Volver a construir confianza desde compromisos verificables.",
       "No prometer disponibilidad ilimitada; prometer método y seguimiento."
     ],
-    "herramientas": ["Plan de seguimiento", "Registro CRM", "Canal directo de contacto"],
+    "herramientas": [
+      "Plan de seguimiento",
+      "Registro CRM",
+      "Canal directo de contacto"
+    ],
     "cierre": "Permítame demostrarle con este caso del mundo real cómo trabajo. Si la experiencia no le agrega valor, usted mantiene su decisión. Pero si ve diferencia, avanzamos.",
     "whatsapp": "Lamento la mala experiencia que tuviste en el pasado. Mi forma de trabajar es diferente, enfocada en diagnóstico claro, respuestas rápidas y seguimiento real. Si te parece, te lo demuestro con tu caso actual.",
     "llamada": "Le propongo evaluar mi servicio a través de un diagnóstico concreto. Si no ve una diferencia en la atención, mantiene su decisión.",
@@ -327,13 +963,38 @@
       "Discutir sobre el pasado.",
       "Ponerse a la defensiva.",
       "Prometer cosas que no se pueden cumplir."
-    ]
+    ],
+    "concepto_tecnico": "Gestión de incidencias comerciales, trazabilidad de requerimientos de clientes y el rol del ejecutivo previsional como gestor patrimonial. Construcción de confianza comercial mediante hitos de contacto verificables (CRM de seguimiento).",
+    "explicacion_simple": "Lamento mucho la mala atención que viviste en el pasado. No busco justificar ese mal servicio, sino ofrecerte una forma de trabajo diferente basada en un diagnóstico transparente, un canal de contacto directo y un compromiso formal de revisión anual.",
+    "ejemplo_practico": "Un cliente tuvo problemas de demora en el traspaso de su cuenta en el pasado y quedó sin contacto. Al asignársele un ejecutivo de seguimiento con revisiones programadas anuales y contacto vía canal preferente, el cliente recuperó la confianza y ordenó exitosamente su APV.",
+    "role_play": {
+      "cliente_plantea": "No me quiero cambiar con ustedes porque en el pasado tuve una experiencia pésima con su servicio al cliente.",
+      "ejecutivo_responde": "Le agradezco la honestidad y lamento sinceramente que haya tenido que pasar por esa situación. Un mal servicio no se justifica. Permítame consultarle: ¿el inconveniente fue por falta de respuesta, errores en trámites o falta de información?",
+      "cliente_repregunta": "Me demoraron un trámite de clave y nadie me daba respuestas claras en el call center ni en la sucursal.",
+      "ejecutivo_profundiza_cierra": "Comprendo perfectamente su frustración; el acceso a sus ahorros y claves debe ser rápido y seguro. Lo que le propongo hoy es una forma de trabajar distinta: yo seré su ejecutivo a cargo, con mi canal de contacto directo y celular para resolver cualquier requerimiento técnico, respaldado por una agenda anual de revisión. Le pido la oportunidad de demostrarle con este primer diagnóstico la diferencia de servicio. ¿Le parece?"
+    },
+    "modo_estudio": "El ejecutivo debe asumir la responsabilidad de restaurar la confianza del cliente sin ponerse a la defensiva ni criticar a la propia institución. Debe basar su propuesta de valor en su rol individual como gestor profesional directo, asumiendo compromisos claros, transparentes y documentados de seguimiento de postventa.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Le gustaría contar con un canal preferente de contacto directo con un asesor para resolver sus consultas y trámites?",
+        "¿Qué requerimiento quedó pendiente en su experiencia anterior que podamos resolver hoy mismo?"
+      ],
+      "respuesta_30s": "Entiendo y lamento la mala experiencia previa. Mi objetivo es entregarte un servicio personalizado, con un canal de contacto directo y una planificación clara de tus metas para asegurar que recibas el soporte que mereces de forma oportuna.",
+      "cierre_recomendado": "Permítame ser su asesor directo y comenzar resolviendo sus dudas actuales con un diagnóstico rápido. ¿Le acomoda revisar su saldo hoy?"
+    }
   },
   {
     "id": "OBJ-018",
     "categoria": "Rentabilidad",
-    "producto": ["Cuenta Obligatoria", "APV", "Cuenta 2"],
-    "canal": ["Reunión", "Llamada"],
+    "producto": [
+      "Cuenta Obligatoria",
+      "APV",
+      "Cuenta 2"
+    ],
+    "canal": [
+      "Reunión",
+      "Llamada"
+    ],
     "nivel": "Avanzado",
     "sensibilidad": "Amarillo",
     "objecion_cliente": "Habitat / Modelo / otra AFP está rentando más",
@@ -351,7 +1012,11 @@
       "Comparar con metodología consistente.",
       "Enfatizar asesoría, plazo, riesgo y objetivos."
     ],
-    "herramientas": ["Tabla comparativa por horizontes", "Semáforo de ganadores por plazo", "Simulación de saldo final"],
+    "herramientas": [
+      "Tabla comparativa por horizontes",
+      "Semáforo de ganadores por plazo",
+      "Simulación de saldo final"
+    ],
     "cierre": "Tomemos ese dato como punto de partida, no como conclusión. Lo revisamos juntos y vemos qué decisión se sostiene mejor.",
     "whatsapp": "Es cierto que hay periodos donde una administradora puede liderar. Lo importante es ver la consistencia a largo plazo y si el fondo actual es el adecuado para tu perfil. Si quieres, lo revisamos juntos con datos.",
     "llamada": "Le propongo comparar la rentabilidad en distintos plazos y ver si su estrategia actual es la más eficiente para su perfil de riesgo.",
@@ -359,6 +1024,24 @@
       "Desacreditar a la competencia.",
       "Prometer que rentaremos más en el futuro.",
       "Ignorar el dato del cliente."
-    ]
+    ],
+    "concepto_tecnico": "Comparación metodológica de rentabilidad neta histórica de largo plazo ajustada a riesgo (Índice de Sharpe) y consistencia en el tiempo. La volatilidad coyuntural de los rankings mensuales y los límites de la rentabilidad pasada como predictor de retornos futuros.",
+    "explicacion_simple": "Es normal que en ciertos meses una administradora lidere los rankings. Sin embargo, no debemos tomar decisiones previsionales mirando solo la foto del mes; la clave está en analizar la consistencia de rentabilidad en el largo plazo (3, 5 y 10 años) para ver qué estrategia es la más sólida.",
+    "ejemplo_practico": "Una administradora lideró el ranking del Fondo A en 2021 debido a apuestas de mercado agresivas de corto plazo, pero en 2022 sufrió caídas mucho más profundas que el promedio, afectando negativamente el saldo acumulado de los clientes que se traspasaron atraídos por el ranking inicial.",
+    "role_play": {
+      "cliente_plantea": "He visto que otras AFP están rentando más que ustedes en este momento, prefiero cambiarme para allá.",
+      "ejecutivo_responde": "Es muy válido que revise las cifras de rentabilidad constantemente. Para analizarlo de forma correcta: ¿el dato de liderazgo que observó corresponde al último mes o responde a la consistencia de los últimos 5 o 10 años?",
+      "cliente_repregunta": "Lo vi en un anuncio de prensa de esta semana que destacaba que eran el número uno en rentabilidad reciente.",
+      "ejecutivo_profundiza_cierra": "Es usual que la publicidad destaque la foto que más les favorece en el momento. Pero la pensión se construye en el largo plazo, y cambiarse por el dato del mes puede hacer que compre caro y venda barato. Comparemos la rentabilidad oficial histórica a 5 y 10 años de los multifondos para tomar una decisión con base en la película completa y no solo en la foto de hoy. ¿Revisamos las tablas del regulador?"
+    },
+    "modo_estudio": "El ejecutivo debe conocer el concepto de rentabilidad de largo plazo. Debe saber argumentar sin descalificar a los competidores, explicando que la rentabilidad es fluctuante por naturaleza. Es crucial centrar la conversación en el Índice de Sharpe y en la consistencia de retornos a 36, 60 y 120 meses para demostrar solidez en la administración de fondos de pensión.",
+    "modo_reunion": {
+      "preguntas_clave": [
+        "¿Está comparando el mismo multifondo y el mismo horizonte de tiempo para hacer la comparación justa?",
+        "¿Sabe que cambiarse de AFP persiguiendo al ganador mensual de rentabilidad suele destruir valor en su saldo?"
+      ],
+      "respuesta_30s": "Es normal ver variaciones de rankings mensuales de rentabilidad, pero tu ahorro previsional requiere consistencia. Lo correcto es comparar el rendimiento en plazos largos de 5 a 10 años, lo que demuestra la solidez real de la administración ante diferentes ciclos del mercado.",
+      "cierre_recomendado": "Revisemos el gráfico comparativo oficial de consistencia de rentabilidad histórica a largo plazo para tomar una decisión informada. ¿Le parece?"
+    }
   }
 ]

@@ -59,7 +59,7 @@ if "role_play_user_answer" not in st.session_state:
 if "role_play_evaluated" not in st.session_state:
     st.session_state.role_play_evaluated = False
 
-# --- DISEÑO Y ESTILOS CSS (AESTHETICS) ---
+# --- DISEÑO Y ESTILOS CSS ---
 def apply_custom_styles():
     st.markdown("""
     <style>
@@ -139,6 +139,16 @@ def apply_custom_styles():
         margin-bottom: 12px;
         line-height: 1.5;
     }
+    .accent-box {
+        background-color: #FFF7EF;
+        border-radius: 8px;
+        padding: 15px 20px;
+        border-left: 4px solid #FF8200;
+        font-size: 1.05rem;
+        color: #0F2C59;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
     .error-box {
         background-color: #FCE8E6;
         border-radius: 8px;
@@ -171,6 +181,39 @@ def apply_custom_styles():
     }
     .tool-link:hover {
         text-decoration: underline;
+    }
+    
+    /* Burbujas de Chat / Role Play */
+    .chat-bubble {
+        padding: 12px 16px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        max-width: 80%;
+        line-height: 1.5;
+        font-size: 0.95rem;
+    }
+    .chat-client {
+        background-color: #F1F3F4;
+        color: #2D3748;
+        border-bottom-left-radius: 2px;
+        align-self: flex-start;
+    }
+    .chat-executive {
+        background-color: #FFF7EF;
+        color: #0F2C59;
+        border-bottom-right-radius: 2px;
+        border-left: 4px solid #FF8200;
+        align-self: flex-end;
+        margin-left: auto;
+    }
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border: 1px solid #E8EAED;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 15px;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -212,17 +255,14 @@ def export_objection_markdown(obj):
     md = f"# Objeción: {obj['objecion_cliente']}\n\n"
     md += f"**ID**: {obj['id']} | **Categoría**: {obj['categoria']} | **Dificultad**: {obj['nivel']}\n\n"
     md += f"## Qué hay detrás\n{obj['fondo_real']}\n\n"
+    md += f"## Concepto Técnico de Fondo\n{obj.get('concepto_tecnico', 'No especificado.')}\n\n"
+    md += f"## Explicación Simple para el Cliente\n{obj.get('explicacion_simple', 'No especificada.')}\n\n"
     md += f"## Preguntas de Diagnóstico\n"
     for q in obj['preguntas_diagnostico']:
         md += f"- {q}\n"
-    md += f"\n## Respuesta Comercial Recomendada\n{obj['respuesta_comercial']}\n\n"
-    md += f"## Argumentos de Apoyo\n"
-    for arg in obj['argumentos']:
-        md += f"- {arg}\n"
-    md += f"\n## Herramientas / Evidencia\n"
-    for tool in obj['herramientas']:
-        md += f"- {tool}\n"
-    md += f"\n## Cierre Sugerido\n{obj['cierre']}\n\n"
+    md += f"\n## Argumento Comercial Recomendado\n{obj['respuesta_comercial']}\n\n"
+    md += f"## Ejemplo Práctico Aplicado\n{obj.get('ejemplo_practico', 'No especificado.')}\n\n"
+    md += f"## Cierre Sugerido\n{obj['cierre']}\n\n"
     md += f"## Versiones por Canal\n"
     md += f"- **WhatsApp**: {obj.get('whatsapp', '')}\n"
     md += f"- **Llamada**: {obj.get('llamada', '')}\n\n"
@@ -234,23 +274,29 @@ def export_objection_markdown(obj):
 def export_study_sheet_markdown(obj):
     md = f"# Ficha de Estudio: {obj['objecion_cliente']}\n\n"
     md += f"**ID**: {obj['id']} | **Categoría**: {obj['categoria']} | **Nivel**: {obj['nivel']}\n\n"
-    md += f"## 1. Análisis del Comportamiento del Cliente\n"
+    md += f"## 1. Análisis Psicológico y Comercial\n"
     md += f"**Fondo Real**: {obj['fondo_real']}\n\n"
-    md += f"## 2. Preguntas de Diagnóstico Clínico Comercial\n"
+    md += f"## 2. Concepto Técnico de Fondo\n"
+    md += f"{obj.get('concepto_tecnico', 'No especificado.')}\n\n"
+    md += f"## 3. Explicación Simple (Sin Tecnicismos)\n"
+    md += f"{obj.get('explicacion_simple', 'No especificada.')}\n\n"
+    md += f"## 4. Preguntas de Diagnóstico Clínico Comercial\n"
     for q in obj['preguntas_diagnostico']:
         md += f"- {q}\n"
-    md += f"\n## 3. Respuesta Sugerida y Argumentación\n"
-    md += f"**Respuesta**: {obj['respuesta_comercial']}\n\n"
-    md += f"**Argumentos Clave**:\n"
-    for arg in obj['argumentos']:
-        md += f"- {arg}\n"
-    md += f"\n## 4. Guía de Práctica y Role Play\n"
-    md += f"- **Contexto de Práctica**: Practica esta objeción con un colega simulando una reunión de {obj.get('producto', ['AFP'])[0]}.\n"
-    md += f"- **Pregunta de Autoevaluación**: ¿Lograste empatizar antes de dar la respuesta?\n\n"
-    md += f"## 5. Checklist de Dominio Comercial\n"
-    md += f"- [ ] Puedo parafrasear la respuesta comercial de forma natural.\n"
-    md += f"- [ ] Comprendo la motivación real detrás del cliente.\n"
-    md += f"- [ ] Sé cómo guiar la conversación al cierre diagnóstico.\n"
+    md += f"\n## 5. Argumentación Comercial y Respuestas\n"
+    md += f"**Respuesta Comercial**: {obj['respuesta_comercial']}\n\n"
+    md += f"**Ejemplo Práctico**: {obj.get('ejemplo_practico', 'No especificado.')}\n\n"
+    md += f"## 6. Guía de Role Play Sugerida\n"
+    rp = obj.get("role_play", {})
+    md += f"- **Cliente plantea**: \"{rp.get('cliente_plantea', '')}\"\n"
+    md += f"- **Ejecutivo responde**: \"{rp.get('ejecutivo_responde', '')}\"\n"
+    md += f"- **Cliente repregunta**: \"{rp.get('cliente_repregunta', '')}\"\n"
+    md += f"- **Ejecutivo profundiza y cierra**: \"{rp.get('ejecutivo_profundiza_cierra', '')}\"\n\n"
+    md += f"## 7. Checklist de Dominio Técnico y Comercial\n"
+    md += f"- [ ] Comprendo el concepto técnico de fondo de esta objeción.\n"
+    md += f"- [ ] Puedo explicar este concepto en lenguaje simple y sin usar marcas externas.\n"
+    md += f"- [ ] Sé guiar al cliente mediante al menos dos preguntas de diagnóstico.\n"
+    md += f"- [ ] Puedo replicar la secuencia de cierre sin prometer rentabilidad.\n"
     return md
 
 # --- MENU LATERAL (SIDEBAR) ---
@@ -315,20 +361,20 @@ if menu == "🏠 Inicio":
     st.markdown("""
     Esta herramienta está diseñada para acompañarte en tu día a día comercial. Puedes usarla en diversos momentos:
     
-    *   **En vivo con el cliente (Modo Reunión):** Obtén respuestas de 30 segundos y preguntas clave en medio de una llamada o reunión.
-    *   **Autoestudio (Modo Estudio y Role Play):** Domina los argumentos comerciales, practica tus respuestas y autoevalúate con escenarios interactivos.
-    *   **Seguimiento digital (WhatsApp):** Envía textos adaptados y listos con diferentes tonos profesionales.
-    *   **Actualización normativa (Configuración):** Ajusta comisiones, topes y links de herramientas para que la app se actualice dinámicamente.
+    *   **En vivo con el cliente (Modo Reunión / Pestaña Respuesta Rápida):** Obtén respuestas de 30 segundos y preguntas clave en medio de una llamada o reunión.
+    *   **Autoestudio (Modo Estudio y Role Play):** Domina los argumentos comerciales, comprende el fundamento técnico de las objeciones y autoevalúate.
+    *   **Seguimiento digital (WhatsApp):** Genera y copia mensajes adaptados según el perfil y tono del cliente.
+    *   **Actualización normativa (Configuración):** Ajusta comisiones, topes y links de herramientas para que la app se mantenga al día de forma permanente.
     """)
     
     st.markdown("### Disclaimers y Reglas Generales de Uso")
     for d in disclaimers:
         st.info(d)
 
-# 2. MÓDULO BUSCAR OBJECIÓN
+# 2. MÓDULO BUSCAR OBJECIÓN (CON LAS 7 PESTAÑAS)
 elif menu == "🔍 Buscar Objeción":
     st.markdown("<h1 class='app-title'>Buscador General de Objeciones</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='app-subtitle'>Filtra y encuentra argumentos específicos al instante</p>", unsafe_allow_html=True)
+    st.markdown("<p class='app-subtitle'>Busca por palabra clave o filtra por categorías para acceder a las fichas estructuradas</p>", unsafe_allow_html=True)
     
     # Buscador por palabra clave
     query = st.text_input("Buscador general", placeholder="Ej: caro, rentabilidad, no tengo tiempo...")
@@ -356,6 +402,7 @@ elif menu == "🔍 Buscar Objeción":
             o for o in filtered
             if query.lower() in o["objecion_cliente"].lower()
             or query.lower() in o["fondo_real"].lower()
+            or query.lower() in o.get("concepto_tecnico", "").lower()
             or query.lower() in o["respuesta_comercial"].lower()
         ]
     if f_cat != "Todas":
@@ -384,84 +431,146 @@ elif menu == "🔍 Buscar Objeción":
     
     st.markdown("---")
     
-    # Vista de Tarjetas
+    # Vista de Tarjetas con las 7 pestañas integradas
     for obj in filtered:
         sens = obj.get("sensibilidad", "Verde")
         border_class = f"border-{sens.lower()}"
         badge_class = f"badge-{sens.lower()}"
         
-        # Estructura de tarjeta en HTML
+        # Tarjeta contenedor de cabecera
         st.markdown(f"""
-        <div class='objection-card {border_class}'>
+        <div class='objection-card {border_class}' style='margin-bottom: 5px;'>
             <div style='display:flex; justify-content:space-between; align-items:center;'>
-                <strong style='font-size:1.15rem; color:#0F2C59;'>{obj['objecion_cliente']}</strong>
+                <strong style='font-size:1.2rem; color:#0F2C59;'>{obj['objecion_cliente']}</strong>
                 <div>
                     <span class='badge {badge_class}'>Sensibilidad: {sens}</span>
                     <span class='badge badge-secondary'>{obj['nivel']}</span>
                 </div>
             </div>
-            <div style='margin-top:10px;'>
+            <div style='margin-top:8px;'>
                 <small style='color:#718096;'>ID: {obj['id']} | Categoría: {obj['categoria']} | Productos: {", ".join(obj['producto'])}</small>
             </div>
         </div>
         """, unsafe_allow_html=True)
         
-        # Expander para ver los detalles
-        with st.expander("Ver Plan de Acción Comercial Completo", expanded=False):
-            st.markdown("<div class='section-title'>🔍 ¿Qué hay detrás? (Fondo Real)</div>", unsafe_allow_html=True)
-            st.markdown(f"<div class='content-box'>{obj['fondo_real']}</div>", unsafe_allow_html=True)
+        # Renderizado de pestañas de contenido dentro de un st.container para organizar la UI
+        with st.container():
+            t1, t2, t3, t4, t5, t6, t7 = st.tabs([
+                "⚡ Respuesta Rápida",
+                "📚 Fundamento Educativo",
+                "❓ Diagnóstico",
+                "💡 Ejemplo Práctico",
+                "🎭 Role Play",
+                "💬 WhatsApp",
+                "⚠️ Errores a Evitar"
+            ])
             
-            st.markdown("<div class='section-title'>💬 Preguntas de Diagnóstico Recomendadas</div>", unsafe_allow_html=True)
-            for q in obj["preguntas_diagnostico"]:
-                st.markdown(f"- {q}")
+            # 1. Pestaña: Respuesta Rápida
+            with t1:
+                mr = obj.get("modo_reunion", {})
+                st.markdown("### ❓ Pregunta Inicial de Calificación")
+                p_reunion = mr.get("preguntas_clave", obj["preguntas_diagnostico"])[0]
+                st.markdown(f"<div class='content-box' style='border-left-color:#FF8200;'><strong>Pregunta:</strong> \"{p_reunion}\"</div>", unsafe_allow_html=True)
                 
-            st.markdown("<div class='section-title'>🎯 Respuesta Comercial Recomendada</div>", unsafe_allow_html=True)
-            st.markdown(f"<div class='content-box'>{obj['respuesta_comercial']}</div>", unsafe_allow_html=True)
-            st.code(obj['respuesta_comercial'], language="text")
-            
-            st.markdown("<div class='section-title'>💡 Argumentos de Apoyo</div>", unsafe_allow_html=True)
-            for arg in obj["argumentos"]:
-                st.markdown(f"- {arg}")
+                st.markdown("### 🎯 Respuesta de 30 Segundos")
+                resp_reunion = mr.get("respuesta_30s", obj["respuesta_comercial"])
+                st.markdown(f"<div class='accent-box'>\"{resp_reunion}\"</div>", unsafe_allow_html=True)
+                st.code(resp_reunion, language="text")
                 
-            st.markdown("<div class='section-title'>🛠️ Herramientas / Evidencia Sugerida</div>", unsafe_allow_html=True)
-            for tool in obj["herramientas"]:
-                link_html = render_tool_link(tool)
-                st.markdown(f"- {link_html}", unsafe_allow_html=True)
+                st.markdown("### 🏁 Cierre Recomendado")
+                cierre_reunion = mr.get("cierre_recomendado", obj["cierre"])
+                st.markdown(f"<div class='content-box'>\"{cierre_reunion}\"</div>", unsafe_allow_html=True)
+                st.code(cierre_reunion, language="text")
                 
-            st.markdown("<div class='section-title'>🏁 Cierre Sugerido</div>", unsafe_allow_html=True)
-            st.markdown(f"<div class='content-box'>{obj['cierre']}</div>", unsafe_allow_html=True)
-            st.code(obj['cierre'], language="text")
-            
-            st.markdown("<div class='section-title'>⚠️ Errores Frecuentes a Evitar</div>", unsafe_allow_html=True)
-            for err in obj["errores_evitar"]:
-                st.markdown(f"<div class='error-box'>✘ {err}</div>", unsafe_allow_html=True)
+            # 2. Pestaña: Fundamento Educativo
+            with t2:
+                st.markdown("### 🔬 Concepto Técnico de Fondo")
+                st.markdown(f"<div class='content-box' style='background-color:#F0F4F8;'>{obj.get('concepto_tecnico', 'No especificado.')}</div>", unsafe_allow_html=True)
                 
-            # Exportaciones individuales
-            obj_md = export_objection_markdown(obj)
-            study_md = export_study_sheet_markdown(obj)
-            
-            col_exp1, col_exp2 = st.columns(2)
-            with col_exp1:
+                st.markdown("### 📢 Explicación Simple para el Cliente")
+                st.markdown(f"<div class='content-box'>{obj.get('explicacion_simple', 'No especificada.')}</div>", unsafe_allow_html=True)
+                
+                st.markdown("### 📖 Guía Formativa de Autoestudio")
+                st.write(obj.get("modo_estudio", "No especificado."))
+                
+                # Botón de descarga de ficha
+                study_md = export_study_sheet_markdown(obj)
                 st.download_button(
-                    label="📄 Descargar Ficha en Markdown",
-                    data=obj_md,
-                    file_name=f"ficha_{obj['id']}.md",
-                    mime="text/markdown",
-                    key=f"dl_md_{obj['id']}"
-                )
-            with col_exp2:
-                st.download_button(
-                    label="📖 Descargar Ficha de Estudio",
+                    label="📥 Descargar Ficha de Estudio en Markdown",
                     data=study_md,
                     file_name=f"estudio_{obj['id']}.md",
                     mime="text/markdown",
-                    key=f"dl_std_{obj['id']}"
+                    key=f"dl_std_btn_{obj['id']}"
                 )
+                
+            # 3. Pestaña: Preguntas de Diagnóstico
+            with t3:
+                st.markdown("### 💬 Preguntas para Explorar la Objeción")
+                st.write("Usa estas preguntas en tu reunión para indagar y evitar entrar en debates técnicos de entrada:")
+                for q in obj["preguntas_diagnostico"]:
+                    st.markdown(f"*   *\"{q}\"*")
+                
+                st.markdown("### 💡 Argumentos Clave Relacionados")
+                for arg in obj["argumentos"]:
+                    st.markdown(f"- {arg}")
+                    
+                st.markdown("### 🛠️ Herramientas Sugeridas para Respaldar")
+                for tool in obj["herramientas"]:
+                    link_html = render_tool_link(tool)
+                    st.markdown(f"- {link_html}", unsafe_allow_html=True)
+                    
+            # 4. Pestaña: Ejemplo Práctico
+            with t4:
+                st.markdown("### 💡 Caso Aplicado de Demostración")
+                st.write("Aterriza este concepto al cliente usando este escenario práctico simplificado:")
+                st.markdown(f"<div class='content-box'>{obj.get('ejemplo_practico', 'No especificado.')}</div>", unsafe_allow_html=True)
+                
+            # 5. Pestaña: Role Play
+            with t5:
+                st.markdown("### 🎭 Flujo de Diálogo de Simulación")
+                st.write("Estructura de conversación recomendada ante este escenario:")
+                rp = obj.get("role_play", {})
+                
+                st.markdown(f"""
+                <div class='chat-container'>
+                    <div class='chat-bubble chat-client'>
+                        <strong>Cliente plantea:</strong><br>"{rp.get('cliente_plantea', 'No especificado.')}"
+                    </div>
+                    <div class='chat-bubble chat-executive'>
+                        <strong>Ejecutivo responde:</strong><br>"{rp.get('ejecutivo_responde', 'No especificado.')}"
+                    </div>
+                    <div class='chat-bubble chat-client'>
+                        <strong>Cliente repregunta:</strong><br>"{rp.get('cliente_repregunta', 'No especificado.')}"
+                    </div>
+                    <div class='chat-bubble chat-executive'>
+                        <strong>Ejecutivo profundiza y cierra:</strong><br>"{rp.get('ejecutivo_profundiza_cierra', 'No especificado.')}"
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+                
+            # 6. Pestaña: WhatsApp
+            with t6:
+                st.markdown("### 💬 Generador de WhatsApp Personalizado")
+                c_name = st.text_input("Nombre del cliente", placeholder="Ej: Carolina", key=f"wa_name_{obj['id']}")
+                c_tone = st.selectbox("Selecciona el tono", ["Cercano", "Ejecutivo", "Directo", "Educativo"], key=f"wa_tone_{obj['id']}")
+                
+                wa_msg = generate_whatsapp_message(obj, c_tone, c_name)
+                st.markdown("**Mensaje resultante (Copiar):**")
+                st.code(wa_msg, language="text")
+                
+            # 7. Pestaña: Errores a Evitar
+            with t7:
+                st.markdown("### 🚫 Alertas y Errores Frecuentes")
+                st.write("Evita decir o hacer lo siguiente frente a esta objeción:")
+                for err in obj["errores_evitar"]:
+                    st.markdown(f"<div class='error-box'>✘ {err}</div>", unsafe_allow_html=True)
+        
+        st.markdown("<hr style='margin-top:10px; margin-bottom:30px; border-color:#E8EAED;'>", unsafe_allow_html=True)
 
-# 3. MÓDULO MODO REUNIÓN
+# 3. MÓDULO MODO REUNIÓN (ALINEADO A LA NUEVA ESTRUCTURA)
 elif menu == "🤝 Modo Reunión":
-    st.markdown("<h1 class='app-title'>Modo Reunión (En Vivo con Cliente)</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='app-subtitle'>Esquema de acción ultrarrápido y de alto impacto para uso durante la llamada o reunión</p>", unsafe_allow_html=True)
+    st.markdown("<h1 class='app-title'>Modo Reunión (Uso Rápido con Cliente)</h1>", unsafe_allow_html=True)
+    st.markdown("<p class='app-subtitle'>Esquema de acción express y de alto impacto para uso durante la llamada o videoconferencia</p>", unsafe_allow_html=True)
     
     # Selector de objeción rápido
     obj_options = {o["objecion_cliente"]: o for o in st.session_state.objeciones}
@@ -471,6 +580,7 @@ elif menu == "🤝 Modo Reunión":
         obj = obj_options[selected_text]
         sens = obj.get("sensibilidad", "Verde")
         badge_class = f"badge-{sens.lower()}"
+        mr = obj.get("modo_reunion", {})
         
         st.markdown(f"""
         <div style='background-color:#0F2C59; color:#FFFFFF; padding:20px; border-radius:10px; margin-bottom:20px;'>
@@ -485,8 +595,9 @@ elif menu == "🤝 Modo Reunión":
         col1, col2 = st.columns(2)
         
         with col1:
-            st.markdown("### ❓ 3 Preguntas Clave de Diagnóstico")
-            for i, q in enumerate(obj["preguntas_diagnostico"][:3]):
+            st.markdown("### ❓ Preguntas Clave de Diagnóstico")
+            p_clave = mr.get("preguntas_clave", obj["preguntas_diagnostico"])
+            for i, q in enumerate(p_clave[:3]):
                 st.markdown(f"""
                 <div style='background-color:#FFFFFF; border-left:4px solid #FF8200; padding:12px; margin-bottom:10px; border-radius:4px; box-shadow:0 2px 5px rgba(0,0,0,0.05);'>
                     <strong>{i+1}.</strong> {q}
@@ -494,25 +605,26 @@ elif menu == "🤝 Modo Reunión":
                 """, unsafe_allow_html=True)
                 
             st.markdown("### 🏁 Cierre Recomendado")
-            st.markdown(f"<div class='content-box' style='border-left-color:#FF8200;'>{obj['cierre']}</div>", unsafe_allow_html=True)
-            st.code(obj['cierre'], language="text")
+            cierre_rec = mr.get("cierre_recomendado", obj["cierre"])
+            st.markdown(f"<div class='content-box' style='border-left-color:#FF8200;'>{cierre_rec}</div>", unsafe_allow_html=True)
+            st.code(cierre_rec, language="text")
             
         with col2:
-            st.markdown("### ⏱️ Respuesta en 30 Segundos")
+            st.markdown("### ⏱️ Respuesta Comercial en 30 Segundos")
+            resp_30 = mr.get("respuesta_30s", obj["respuesta_comercial"])
             st.markdown(f"""
             <div style='background-color:#FFF7EF; border-left:4px solid #0F2C59; padding:15px; border-radius:6px; font-size:1.05rem; line-height:1.6; color:#0F2C59;'>
-                "{obj['respuesta_comercial']}"
+                "{resp_30}"
             </div>
             """, unsafe_allow_html=True)
-            st.code(obj['respuesta_comercial'], language="text")
+            st.code(resp_30, language="text")
             
-            # Recordatorio de cumplimiento dinámico
-            st.warning("⚠️ Recuerda registrar la objeción e intenciones en el CRM corporativo una vez finalizada la interacción.")
+            st.warning("⚠️ Recuerda registrar la objeción en el CRM una vez finalizada la interacción.")
 
 # 4. MÓDULO MODO ESTUDIO
 elif menu == "📖 Modo Estudio":
     st.markdown("<h1 class='app-title'>Modo Estudio Individual</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='app-subtitle'>Profundiza en la argumentación técnica y metodologías comerciales</p>", unsafe_allow_html=True)
+    st.markdown("<p class='app-subtitle'>Aprende la profundidad conceptual detrás de cada objeción para enriquecer tu dominio comercial</p>", unsafe_allow_html=True)
     
     obj_options = {o["objecion_cliente"]: o for o in st.session_state.objeciones}
     selected_text = st.selectbox("Elige la objeción a estudiar", list(obj_options.keys()))
@@ -523,16 +635,22 @@ elif menu == "📖 Modo Estudio":
         st.markdown(f"## {obj['objecion_cliente']}")
         
         # Tabs de estudio
-        tab1, tab2, tab3 = st.tabs(["📚 Fundamentación y Respuesta", "🎭 Guía de Role Play", "✅ Autoevaluación"])
+        tab1, tab2, tab3 = st.tabs(["📚 Fundamentación y Conceptos", "🎭 Guía de Role Play", "✅ Autoevaluación"])
         
         with tab1:
-            st.markdown("### ¿Cuál es la motivación real del cliente?")
+            st.markdown("### ¿Qué hay detrás de la objeción?")
             st.info(obj["fondo_real"])
             
-            st.markdown("### Estructura de la Respuesta Recomendada")
-            st.write(obj["respuesta_comercial"])
+            st.markdown("### 🔬 Concepto Técnico de Fondo")
+            st.markdown(f"<div class='content-box' style='background-color:#F0F4F8; border-left-color:#FF8200;'>{obj.get('concepto_tecnico', 'No especificado.')}</div>", unsafe_allow_html=True)
             
-            st.markdown("### Argumentos Técnicos a Considerar")
+            st.markdown("### 📢 Explicación Simple para el Cliente")
+            st.markdown(f"<div class='content-box'>{obj.get('explicacion_simple', 'No especificada.')}</div>", unsafe_allow_html=True)
+            
+            st.markdown("### 📖 Guía Formativa")
+            st.write(obj.get("modo_estudio", "No especificado."))
+            
+            st.markdown("### Argumentos Técnicos Clave")
             for arg in obj["argumentos"]:
                 st.markdown(f"- {arg}")
                 
@@ -543,14 +661,24 @@ elif menu == "📖 Modo Estudio":
                 
         with tab2:
             st.markdown("### Guión del Juego de Roles")
+            st.write("Estructura de conversación recomendada:")
+            rp = obj.get("role_play", {})
             st.markdown(f"""
-            *   **Contexto del cliente:** Un prospecto en etapa de evaluación de su {", ".join(obj['producto'])}. Nivel de dificultad: **{obj['nivel']}**.
-            *   **Rol Ejecutivo:** Debe usar el **Método R.E.A.C.C.I.O.N.**:
-                1.  **Recibir y Empatizar:** Validar la preocupación del cliente (ej. por costos o rentabilidad) sin debatir.
-                2.  **Diagnosticar:** Hacer al menos 2 preguntas para indagar sobre las experiencias y objetivos del cliente.
-                3.  **Contestar y Evidenciar:** Entregar el argumento comercial y referenciar las herramientas correspondientes.
-                4.  **Cierre:** Proponer el siguiente paso (ej. simulación o próxima cita).
-            """)
+            <div class='chat-container'>
+                <div class='chat-bubble chat-client'>
+                    <strong>Cliente plantea:</strong><br>"{rp.get('cliente_plantea', 'No especificado.')}"
+                </div>
+                <div class='chat-bubble chat-executive'>
+                    <strong>Ejecutivo responde:</strong><br>"{rp.get('ejecutivo_responde', 'No especificado.')}"
+                </div>
+                <div class='chat-bubble chat-client'>
+                    <strong>Cliente repregunta:</strong><br>"{rp.get('cliente_repregunta', 'No especificado.')}"
+                </div>
+                <div class='chat-bubble chat-executive'>
+                    <strong>Ejecutivo profundiza y cierra:</strong><br>"{rp.get('ejecutivo_profundiza_cierra', 'No especificado.')}"
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
             
             st.markdown("### Preguntas de práctica individual")
             st.write("Ensaya responder estas preguntas de diagnóstico en voz alta:")
@@ -561,12 +689,11 @@ elif menu == "📖 Modo Estudio":
             st.markdown("### Checklist de Dominio Comercial")
             st.write("Marca los elementos a medida que los domines en tus llamadas de prueba:")
             
-            # Usar claves únicas basadas en la objeción
-            st.checkbox("Comprendo el motivo real y temores detrás de la objeción.", key=f"chk_fnd_{obj['id']}")
-            st.checkbox("Soy capaz de realizar al menos 2 preguntas de diagnóstico de forma fluida.", key=f"chk_diag_{obj['id']}")
-            st.checkbox("Sé estructurar la respuesta sin titubear y con tono consultivo.", key=f"chk_resp_{obj['id']}")
-            st.checkbox("Identifico qué simuladores/herramientas debo invocar.", key=f"chk_tool_{obj['id']}")
-            st.checkbox("Logro proponer un cierre de bajo compromiso y orientar el paso al CRM.", key=f"chk_crm_{obj['id']}")
+            st.checkbox("Comprendo el concepto técnico de fondo y la estructura de comisiones/impuestos implicada.", key=f"chk_fnd_{obj['id']}")
+            st.checkbox("Soy capaz de traducir conceptos complejos a la explicación simple del cliente.", key=f"chk_diag_{obj['id']}")
+            st.checkbox("Sé guiar la conversación mediante preguntas sin entrar a debatir de forma reactiva.", key=f"chk_resp_{obj['id']}")
+            st.checkbox("Identifico qué simuladores/herramientas debo invocar y sé acceder a ellos.", key=f"chk_tool_{obj['id']}")
+            st.checkbox("Logro proponer el cierre sin prometer rentabilidad futura.", key=f"chk_crm_{obj['id']}")
             
             # Descargar ficha de estudio
             study_md = export_study_sheet_markdown(obj)
@@ -594,6 +721,7 @@ elif menu == "🎭 Role Play":
     if obj:
         sens = obj.get("sensibilidad", "Verde")
         badge_class = f"badge-{sens.lower()}"
+        rp = obj.get("role_play", {})
         
         # Tarjeta de simulación
         st.markdown(f"""
@@ -612,7 +740,7 @@ elif menu == "🎭 Role Play":
         st.session_state.role_play_user_answer = st.text_area(
             "Escribe tu respuesta comercial aquí:",
             value=st.session_state.role_play_user_answer,
-            placeholder="Introduce cómo reaccionarías ante la objeción..."
+            placeholder="Escribe cómo iniciarías la argumentación, empatizando y haciendo preguntas de diagnóstico..."
         )
         
         if st.button("🚀 Evaluar Respuesta"):
@@ -623,11 +751,25 @@ elif menu == "🎭 Role Play":
                 
         if st.session_state.role_play_evaluated:
             st.markdown("---")
-            st.markdown("### 🎯 Respuesta Sugerida AFP Capital")
-            st.markdown(f"<div class='content-box'>{obj['respuesta_comercial']}</div>", unsafe_allow_html=True)
             
-            st.markdown("### 🏁 Cierre Sugerido")
-            st.write(obj["cierre"])
+            # Mostrar diálogo de referencia
+            st.markdown("### 🎭 Diálogo de Referencia Recomendado")
+            st.markdown(f"""
+            <div class='chat-container'>
+                <div class='chat-bubble chat-client'>
+                    <strong>Cliente plantea:</strong><br>"{rp.get('cliente_plantea', '')}"
+                </div>
+                <div class='chat-bubble chat-executive'>
+                    <strong>Ejecutivo responde (Empatía + Diagnóstico):</strong><br>"{rp.get('ejecutivo_responde', '')}"
+                </div>
+                <div class='chat-bubble chat-client'>
+                    <strong>Cliente repregunta:</strong><br>"{rp.get('cliente_repregunta', '')}"
+                </div>
+                <div class='chat-bubble chat-executive'>
+                    <strong>Ejecutivo profundiza y cierra:</strong><br>"{rp.get('ejecutivo_profundiza_cierra', '')}"
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
             
             st.markdown("### ✅ Checklist de Autoevaluación")
             st.write("Revisa tu respuesta escrita y califica sinceramente si cumpliste los siguientes puntos:")
@@ -636,7 +778,7 @@ elif menu == "🎭 Role Play":
             c2 = st.checkbox("¿Hice preguntas de diagnóstico antes de entregar la respuesta?", key="eval_2")
             c3 = st.checkbox("¿Conecté mi argumento con el objetivo real del cliente?", key="eval_3")
             c4 = st.checkbox("¿Hice referencia a alguna evidencia o herramienta interna (simuladores, comparadores)?", key="eval_4")
-            c5 = st.checkbox("¿Cerré proponiendo un siguiente paso concreto (diagnóstico, cotización, etc.)?", key="eval_5")
+            c5 = st.checkbox("¿Cerró con un siguiente paso concreto (diagnóstico, cotización, etc.)?", key="eval_5")
             c6 = st.checkbox("¿Evité prometer rentabilidades futuras de manera absoluta (cumplimiento)?", key="eval_6")
             
             score = sum([c1, c2, c3, c4, c5, c6])
@@ -690,7 +832,7 @@ elif menu == "💬 WhatsApp":
 # 7. MÓDULO CONFIGURACIÓN
 elif menu == "⚙️ Configuración":
     st.markdown("<h1 class='app-title'>Parámetros y Configuración Comercial</h1>", unsafe_allow_html=True)
-    st.markdown("<p class='app-subtitle'>Modifica los datos normativos, comisiones y enlaces internos. Estos cambios se guardarán de forma persistente.</p>", unsafe_allow_html=True)
+    st.markdown("<p class='app-subtitle'>Modifica los datos normativos, comisiones y enlaces internos. Estos cambios se guardarán de forma permanente.</p>", unsafe_allow_html=True)
     
     # Formulario de edición de parámetros
     with st.form("config_form"):
